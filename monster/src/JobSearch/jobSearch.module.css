@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.AdvanceJobSearch_main,.JobSearchBottom_Main{
+    width: 100%;
+    background-color: rgb(245,245,245);
+}
+.fontStyle{
+    padding: 1.5rem 0rem;
+    text-align: left;
+    margin-left: 12%;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.AdvanceJobSearch{
+    display: flex;
+    width: 100%;
+}
+.FormStyle_left{
+    background-color: white;
+    margin-left: 12%;
+    padding-top: 1rem;
+    width: 56%;
+}
+.fromKeyword{
+    width: 90%;
+    margin: auto;
+    height: 42px;
+    border: 1px solid #ccc;
+    padding: 10px 30px 11px 36px;
+    margin-top: 1.2rem;
+    text-align: left;
+}
+input{
+    border: none;
+    outline:none;
+    font-size: 17px;
+    padding-left: 5px;
+}
+.ExpericenceAndLocation_Input{
+    width: 90%;
+    display: flex;
+    margin: auto;
+}
+.exInput, .exInput_location{
+    height: 42px;
+    width: 49%;
+    margin-top: 1.2rem;
+    padding-top: 10px;
+    border: 1px solid #ccc;
+}
+.exInput_location{
+    margin-left: 1rem;
+}
+
+ .submitButton{
+    width: 90%;
+    margin: auto;
+    height: 42px;
+    margin-top: 1.2rem;
+    border: 1px solid #ccc;
+    background-color: rgb(108,84,218);
+    margin-bottom: 2rem;
+}
+.btn{
+    outline: none;
+    font-size: 17px;
+    background-color: rgb(108,84,218);
+    color: white;
+    margin-top: 0.6rem;
+    border: none;
+}
+
+.minimumSalary,.maximumSalary{
+    width: 30%;
+    height: 42px;
+    margin-top: 1.2rem;
+    padding-top: 10px;
+    border: 1px solid #ccc;
+}
+.jobsCheckbox, .maximumSalary{
+    margin-left: 1rem;
+    height: 42px;
+    padding-top: 10px;
+    margin-top: 1.2rem;
+}
+.FromStyle_Right{
+    margin-left: 2%;
+    width: 20%;
+}
+.FromStyle_Right_Bottom{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-top: 0.8rem;
+}
+.FromStyle_Right_Bottom_bottom{
+    margin-top: 1rem;
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+.SearchTips_font{
+    color: rgb(132,84,218);
+    text-align: left;
+}
+.ExactJobSearch_font{
+    color:  rgb(71,168,236);
+    text-align: left;
+}
+.Looking_font{
+    text-align: left;
+}
+.searchTips_left{
+    /* rgb(71,168,236) */
+}
+.searchTips_Right{
+
+}
+
+/*-----------------------------Job Search Bottom --------------------------*/
+.JobSearchBottom_Main{
+    width: 100%;
+}
+.jobSearh_main_Home_mainFont{
+    padding: 1rem 0rem 2rem 0rem;
+    cursor: pointer;
+    text-align: left;
+    margin-left: 12%;
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+.jobSearh_main{
+    cursor: pointer;
+    margin-left: 11%;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+.JobSearchBottom_jobByLocations{
+    height: 100px;
+    display: flex;
+}
+.jobsType_font{
+    color: rgb(130,84,220);
+}
+.JobByLocation,.JobByNonIT,.InternationalJobs{
+    /* padding-top: 1rem; */
+    width: 80%;
+    text-align: justify;
+    display: grid;
+    grid-template-columns: repeat(8,8.5rem);
+    margin-left: 1rem;
+    height: 15px;
+    font-size: 14px;
+}
+.JobByLocation_Map{
+    /* display: flex; */
+    border-right: 1px solid #ccc;
+    height: 15px;
+    margin-top: 0.5rem;
+}
+.JobSearchBottom_FontDiv{
+    width: 12%;
+    margin-left: 0rem;
+}
+.JobSearchBottom_jobByITSkill{
+    height: 52px;
+    display: flex;
+}
+.JobByNonIT{
+    grid-template-columns: repeat(6,11.5rem);  
+}
+.JobByNonIT_Map{
+    /* width: 400px; */
+    border-right: 1px solid #ccc;
+}
+.InternationalJobs{
+    grid-template-columns: repeat(8,8.5rem);
+    height: 12px;
+}
+
+/* meadia Queary */
+/* small smartphones */
+@media only screen and (max-width: 425px){	
+    .AdvanceJobSearch{
+        display: block;
+        width: 100%;
+    }
+    .FormStyle_left{
+        margin-left: 1rem;
+        padding-top: 1rem;
+        width: 90%;
+    }
+    .fromKeyword{
+        margin: none;
+        display: flex;
+        padding-top: 10px;
+    }
+    .ExpericenceAndLocation_Input{
+        width: 100%;
+        display: block;
+    }
+    .exInput, .exInput_location{
+        width: 90%;
+        margin-top: 1.2rem;
+        margin-left: 1rem;
+        padding-top: 10px;
+    }
+    .exInput_location{
+        margin-left: 1rem;
+    }
+    .minimumSalary,.maximumSalary{
+        width: 90%;
+        margin-left: 1rem;
+        margin-top: 1.2rem;
+        padding-top: 10px;
+    }
+    .FromStyle_Right{
+        width: 100%;
+    }
+    .image{
+        width: 80%;
+        object-fit: contain;
+    }
+    .FromStyle_Right_Bottom{
+        display: none;
+    }
+    .jobSearh_main_Home_mainFont{
+        cursor: pointer;
+        text-align: left;
+        margin-left: 0;
+        font-size: 0.85rem;
+        font-weight: 400;
+    }
+    .JobByLocation,.JobByNonIT,.InternationalJobs{
+        width: 80%;
+        text-align: justify;
+        display: grid;
+        grid-template-columns: repeat(1,8rem);
+        margin-left: 1rem;
+        height: 15px;
+    }
+    /* Bottom page  */
+    .jobSearh_main_Home_mainFont{
+        padding: 1rem 0rem 2rem 0rem;
+        margin-left: 12%;
+    }
+    .JobSearchBottom_jobByLocations{
+        height: 250px;
+        display: block;
+    }
+    .JobSearchBottom_FontDiv{
+        text-align: left;
+        width: 90%;
+        margin-left: 1rem;
+    }
+    .JobByLocation,.JobByNonIT,.InternationalJobs{
+        width: 90%;
+        grid-template-columns: repeat(2,8rem);
+    }
+    .JobSearchBottom_jobByITSkill{
+        height: 150
+        px;
+        display: block;
+    }
+    .JobByNonIT{
+        grid-template-columns: repeat(2,11.5rem);  
+    }
+}
+	/*Big smartphones [426px -> 600px]*/
+@media only screen and (max-width: 600px){
+
+}
