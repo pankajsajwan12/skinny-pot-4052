@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.WorkFromHomes_Main{
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+}
+.WorkFromHomeFilters{
+    background-color: white;
+    border: 1px solid green;
+    height: 95vh;
+    width: 21%;
+}
+.WorkFromHomes{
+    width: 67%;
+}
+.WorkFromHome_Left_JobDetails_Pages{
+    width: 80.5%;
+    margin-left: 3%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.WorkFromHome_TopDiv{
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0.3rem;
+    margin: auto;
+    height: 4rem;
+    width: 100%;
+}
+.selectTag{
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+}
+.WorkFromHome_TopDiv_firstSelectTag{
+    margin-top: 0.6rem;
+    margin-right: 0.9rem;
+}
+
+
+.Job_mainDiv{
+    width: 100%;
+    margin: auto;
+    margin-top: 1.1rem;
+    background-color: white;
+    text-align: left;
+    padding-left: 0.9rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.JobPosition{
+    padding-top: 0.8rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.companyName{
+    color: rgb(108,154,235)
+}
+.jobDeatails{
+    margin-top: 0.5rem;
+}
+.jobSkill{
+    padding-bottom: 1rem;
+}
+.jobPostingTime{
+    width: 100%;
+    margin: auto;
+    background-color:rgb(235,235,235);
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    padding-top: 1.3rem;
+}
+.jobPostingTime_leftSide,.jobPostingTime_rightSide{
+    padding-left: 1rem;
+    display: flex;
+}
+.fontColor{
+    color: rgb(108,154,235) 
+}
+.reactIcons{
+    margin:  0.4rem;
+}
+.icons{
+    width: 30px;
+    height: 30px;
+}
+.applyBtn{
+    border: 1px solid rgb(108,154,235);
+    color: rgb(108,154,235);
+    margin: 0 1rem;
+    width: 7rem;
+    font-size: 17px;
+    font-weight: 500;
+    height: 2.5rem;
+}
+
+.boxIcons{
+    display: flex;
+    justify-content: space-between;
+}
