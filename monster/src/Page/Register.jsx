@@ -16,48 +16,52 @@ import {
   Textarea,
   useDisclosure,
 } from "@chakra-ui/react";
-import React, { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useRef } from "react";
 import axios from "axios"
+import { useForm } from "react-hook-form";
 import styles from "../CSS/Register.module.css";
-import { useDispatch } from "react-redux";
+
 
 const Register = () => {
   // const [address, setAddress] = React.useState("");
   const { isOpen, onOpen, onClose } = useDisclosure();
-  // const { register, formState: { errors } } = useForm();
-  const [form, setForm] = useState({});
-  // const navigate = useNavigate();
-  // const dispatch = useDispatch();
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = data =>{
+    axios.post("https://monsterjobs.herokuapp.com/register",data).then((res)=>{
+        console.log(res.data)
+    }).catch((err)=>{
+        console.log(err.message)
+        alert("Your Account has been Registered")
+    })
+}
   const ref = useRef();
-  const handleChange = (e) => {
-    let { value, name } = e.target;
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
+  // const handleChange = (e) => {
+  //   let { value, name } = e.target;
+  //   setForm({
+  //     ...form,
+  //     [name]: value,
+  //   });
+  // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("form", form);
-    localStorage.setItem("userData", JSON.stringify(form));
-    const UserInfo = JSON.parse(localStorage.getItem("userData"));
-    console.log("UserInfo", UserInfo);
-    // dispatch(signUp(UserInfo));
-    // navigate("/login");
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("form", form);
+  //   localStorage.setItem("userData", JSON.stringify(form));
+  //   const UserInfo = JSON.parse(localStorage.getItem("userData"));
+  //   console.log("UserInfo", UserInfo);
+  //   dispatch(signUp(UserInfo));
+  //   // navigate("/login");
+  // };
 
 
   return (
     <div>
-      <Button
-        colorScheme="white"
-        style={{ color: "black", border: "1px solid black" }}
+      <button
+        className={styles.register}
         onClick={onOpen}
       >
-        REGISTER
-      </Button>
+        Register with us
+      </button>
 
       <Drawer onClose={onClose} isOpen={isOpen} size={"lg"}>
         <DrawerOverlay />
@@ -111,36 +115,36 @@ const Register = () => {
                 </AccordionItem>
               </Accordion>
             </div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit(onSubmit)}>
             <label >Full name *</label>
             <br/>
-            <input placeholder="Enter your Full name" name="username" ref={ref} onChange={handleChange} required value={form.username}  />
-            {/* {errors.username && <span style={{color:"red"}}>Enter your Full name</span>} */}
+            <input placeholder="Enter your Full name" name="username" ref={ref}  {...register("username",{ required: true })}  />
+            {errors.username && <span style={{color:"red"}}>Enter your Full name</span>}
             <br/>
             <br/>
             <label >Email ID *</label>
             <br/>
-            <input placeholder="Enter your email" required name="email" ref={ref} onChange={handleChange} value={form.email} />
-            {/* {errors.email && <span style={{color:"red"}}>Enter your Email</span>} */}
+            <input placeholder="Enter your email" name="email" ref={ref} {...register("email", { required: true })} />
+            {errors.email && <span style={{color:"red"}}>Enter your Email</span>}
             <br/>
             <br/>
             <label>Password *</label>
             <br/>
-            <input type="password" className='inputbox' ref={ref}  placeholder="password should be minimum 6characters" value={form.password} name="password" onChange={handleChange} required minLength={5} />
-            {/* {errors.password && <span style={{color:"red"}}>Enter your password</span>} */}
+            <input type="password" className='inputbox' ref={ref}  placeholder="password should be minimum 6characters" name="password"  {...register("password", { required: true , minLength:5})}  />
+            {errors.password && <span style={{color:"red"}}>Enter your password</span>}
             <br/>
             <br/>
             <label>Mobile Number *</label>
             <br/>
-            <input type="number" placeholder="Enter your Mobile Number" ref={ref} name="number" onChange={handleChange} required />
+            <input type="number" placeholder="Enter your Mobile Number" ref={ref} name="number" {...register("number", { required: true })} />
             {/* {...register("number", { required: true })} */}
-            {/* {errors.number && <span style={{color:"red"}}>Enter your Mobile Number</span>} */}
+            {errors.number && <span style={{color:"red"}}>Enter your Mobile Number</span>}
             <br/>
             <br/>
             <label>Current Location *</label>
             <br/>
-            <input type="search" placeholder="Enter your location" name="location" ref={ref} onChange={handleChange} required  />
-            {/* {errors.location && <span style={{color:"red"}}>Enter your location</span>} */}
+            <input type="search" placeholder="Enter your location" name="location" ref={ref} {...register("location", { required: true })} />
+            {errors.location && <span style={{color:"red"}}>Enter your location</span>}
             <br/>
             <br/>
             <label>Total Experience *</label>

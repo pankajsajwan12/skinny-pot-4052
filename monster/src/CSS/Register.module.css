@@ -43,3 +43,13 @@ input:focus{
     border-radius: 5px;
     width: 120px;
 }
+.register{
+    width: 80%;
+    background-color: #6c54da;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+}
+.register:hover{
+    background-color: #3d2b8de5;
+}
