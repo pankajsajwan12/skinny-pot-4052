@@ -1,18 +1,24 @@
 
 .body{
-    width: 80%;
-    border: 1px solid red;
+    width: 75%;
+    /* border: 1px solid red; */
     margin: auto;
     display: flex;
     gap: 10px;
 }
-.body>div{
+/* .body>div{
     border: 1px solid blue;
-}
+} */
 
 .body>div:first-child{
     width:100%;
 }
 .body>div:last-child{
     width:32%;
+}
+@media (min-width: 200px) and (max-width: 740px) {
+   .body{
+    width: 90%;
+   }
+   
 }
