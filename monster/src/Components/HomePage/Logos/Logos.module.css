@@ -1,0 +1,34 @@
+.logoSliders{
+    width: 75%;
+    margin: auto;
+    border: 1px solid hsla(0,0%,72%,.25);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px;
+    background: rgb(255, 255, 255);
+}
+.logoSliders>h1{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: left;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+/* .logoSliders>div{
+    display: flex;
+} */
+
+
+@media (min-width: 200px) and (max-width: 740px) {
+
+    .logoSliders>h1{
+        font-size: 20px;
+    }
+    .logoSliders{
+        padding: 10px;
+        padding-top: 20px;
+        margin-top: 10px;
+        width: 90%;
+    }
+
+}
