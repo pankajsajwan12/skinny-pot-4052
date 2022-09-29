@@ -152,14 +152,19 @@ const WorkFromHomeFilter = () => {
                 <Box className={style.boxIcons}> 
                   <p><input 
                        type="checkbox"
-                       value="Software Engineer/Prog..."
+                       value="Medical Coder"
                        onChange={handleFilterCheckbox}
-                       checked={category.includes("Software Engineer/Prog...")}  
+                       checked={category.includes("Medical Coder")}  
                        />&nbsp; Medical Coder</p>
                   <p>(558)</p>
                 </Box>
                 <Box className={style.boxIcons}> 
-                  <p><input type="checkbox" name="" id="" />&nbsp; Fresher</p>
+                  <p><input 
+                       type="checkbox"
+                       value="Fresher"
+                       onChange={handleFilterCheckbox}
+                       checked={category.includes("Fresher")}  
+                       />&nbsp; Fresher</p>
                   <p>(323)</p>
                 </Box>
                 <Box className={style.boxIcons}> 
@@ -194,28 +199,28 @@ const WorkFromHomeFilter = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> 0-1 &nbsp; Years</p>
                   <p>(1349)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Health Care</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> 1-2 &nbsp; Years</p>
                   <p>(566)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Admin/Secretarial/Fron...</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> 2-5 &nbsp; Years</p>
                   <p>(332)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT/Software Developme...</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> 5-7 &nbsp; Years</p>
                   <p>(267)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Sales/Business Develop...</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> 7-10 &nbsp; Years</p>
                   <p>(255)</p>
                 </Box>
-                <Box> 
-                  +50 more
+                <Box textAlign='right' pt='2'> 
+                  +2 more
                 </Box>
               </AccordionPanel>
             </>
@@ -237,28 +242,28 @@ const WorkFromHomeFilter = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT</p>
-                  <p>(1349)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Bengalure / Bangalore</p>
+                  <p>(948)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Health Care</p>
-                  <p>(566)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Chennai</p>
+                  <p>(770)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Admin/Secretarial/Fron...</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Hyderabad / Secunder...</p>
                   <p>(332)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT/Software Developme...</p>
-                  <p>(267)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Remote</p>
+                  <p>(442)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Sales/Business Develop...</p>
-                  <p>(255)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Pune</p>
+                  <p>(415)</p>
                 </Box>
-                <Box> 
-                  +50 more
+                <Box textAlign='right' pt='2'> 
+                  +95 more
                 </Box>
               </AccordionPanel>
             </>
@@ -280,28 +285,28 @@ const WorkFromHomeFilter = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> 0-1Lakhs</p>
                   <p>(1349)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Health Care</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> 1-2Lakhs</p>
                   <p>(566)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Admin/Secretarial/Fron...</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> 2-5Lakhs</p>
                   <p>(332)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT/Software Developme...</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> 5-10Lakhs</p>
                   <p>(267)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Sales/Business Develop...</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> 10-20Lakhs</p>
                   <p>(255)</p>
                 </Box>
-                <Box> 
-                  +50 more
+                <Box textAlign='right' pt='2'> 
+                  +4 more
                 </Box>
               </AccordionPanel>
             </>
@@ -323,28 +328,9 @@ const WorkFromHomeFilter = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT</p>
-                  <p>(1349)</p>
-                </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Health Care</p>
-                  <p>(566)</p>
-                </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Admin/Secretarial/Fron...</p>
-                  <p>(332)</p>
-                </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT/Software Developme...</p>
-                  <p>(267)</p>
-                </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Sales/Business Develop...</p>
-                  <p>(255)</p>
-                </Box>
-                <Box> 
-                  +50 more
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Show Only GPTW Jobs</p>
+                  <p>(22)</p>
                 </Box>
               </AccordionPanel>
             </>
@@ -366,28 +352,28 @@ const WorkFromHomeFilter = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT</p>
-                  <p>(1349)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Bachelor of Technolog...</p>
+                  <p>(1500)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Health Care</p>
-                  <p>(566)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Bachelor of Science(B...</p>
+                  <p>(1001)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Admin/Secretarial/Fron...</p>
-                  <p>(332)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Bachelor of Pharmacy ...</p>
+                  <p>(861)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT/Software Developme...</p>
-                  <p>(267)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Other</p>
+                  <p>(844)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Sales/Business Develop...</p>
-                  <p>(255)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Bachelor in Hotel Mana...</p>
+                  <p>(809)</p>
                 </Box>
-                <Box> 
-                  +50 more
+                <Box display='flex' pt='2'> 
+                  +40 more
                 </Box>
               </AccordionPanel>
             </>
@@ -409,28 +395,13 @@ const WorkFromHomeFilter = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT</p>
-                  <p>(1349)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Company</p>
+                  <p>(2484)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Health Care</p>
-                  <p>(566)</p>
-                </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Admin/Secretarial/Fron...</p>
-                  <p>(332)</p>
-                </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT/Software Developme...</p>
-                  <p>(267)</p>
-                </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Sales/Business Develop...</p>
-                  <p>(255)</p>
-                </Box>
-                <Box> 
-                  +50 more
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Consultant</p>
+                  <p>(1064)</p>
                 </Box>
               </AccordionPanel>
             </>
@@ -452,28 +423,28 @@ const WorkFromHomeFilter = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT</p>
-                  <p>(1349)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> **</p>
+                  <p>(714)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Health Care</p>
-                  <p>(566)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> I Skill Solutions</p>
+                  <p>(516)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Admin/Secretarial/Fron...</p>
-                  <p>(332)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> GAO Group</p>
+                  <p>(217)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT/Software Developme...</p>
-                  <p>(267)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Macropace Technologi...</p>
+                  <p>(129)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Sales/Business Develop...</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Shree Pvk Infoservices</p>
                   <p>(255)</p>
                 </Box>
-                <Box> 
-                  +50 more
+                <Box display='flex' pt='2'> 
+                  +95 more
                 </Box>
               </AccordionPanel>
             </>
@@ -496,28 +467,28 @@ const WorkFromHomeFilter = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT</p>
-                  <p>(1349)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> IT/Computers - Software</p>
+                  <p>(1918)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Health Care</p>
-                  <p>(566)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Bio Technology & Life S...</p>
+                  <p>(893)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Admin/Secretarial/Fron...</p>
-                  <p>(332)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Hospitals/Healthcare/D...</p>
+                  <p>(716)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT/Software Developme...</p>
-                  <p>(267)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Other</p>
+                  <p>(660)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Sales/Business Develop...</p>
-                  <p>(255)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> IT/Computers - Hardwa...</p>
+                  <p>(604)</p>
                 </Box>
-                <Box> 
-                  +50 more
+                <Box display='flex' pt='2'> 
+                  +73 more
                 </Box>
               </AccordionPanel>
             </>
@@ -539,28 +510,25 @@ const WorkFromHomeFilter = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT</p>
-                  <p>(1349)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Last 30 Days</p>
+                  <p>(1122)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Health Care</p>
-                  <p>(566)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Last 15 Days</p>
+                  <p>(811)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Admin/Secretarial/Fron...</p>
-                  <p>(332)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Last 7 Days</p>
+                  <p>(507)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> IT/Software Developme...</p>
-                  <p>(267)</p>
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Last 3 Days</p>
+                  <p>(258)</p>
                 </Box>
-                <Box> 
-                  <p><input type="checkbox" name="" id="" /> Sales/Business Develop...</p>
-                  <p>(255)</p>
-                </Box>
-                <Box> 
-                  +50 more
+                <Box className={style.boxIcons}> 
+                  <p><input type="checkbox" name="" id="" /> Last 1 Days</p>
+                  <p>(87)</p>
                 </Box>
               </AccordionPanel>
             </>
