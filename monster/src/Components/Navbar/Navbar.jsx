@@ -153,40 +153,39 @@ import { useEffect } from "react";
             <ul className={styles.user_info}>
               <li>
                 <div>
-                  <h5>job effected by covid-19</h5>
+                  {/* <h5>job effected by covid-19</h5> */}
                   <div>
-                    <input type="radio" name="Yes" />
-                    <span>Yes</span>
+                    {/* <input type="radio" name="Yes" /> */}
+                    {/* <span>Yes</span> */}
                   </div>
                 </div>
               </li>
               {login ? (
-                <>
+               <> 
                   <li>
                     <div>
-                      <AiOutlineDashboard style={{ fontSize: "30px" }} />
+                      {/* <AiOutlineDashboard style={{ fontSize: "30px" }} /> */}
                     </div>
                   </li>
                   <li>
                     <div>
-                      <FaBell style={{ fontSize: "30px" }} />
+                      {/* <FaBell style={{ fontSize: "30px" }} /> */}
                     </div>
                   </li>
                   <li>
                     <div>
-                      <FaUserCircle style={{ fontSize: "30px" }} />
+                      {/* <FaUserCircle style={{ fontSize: "30px" }} /> */}
                     </div>
                   </li>
                 </>
               ) : (
                 <li className={styles.login}>
                   <NavLink to={"/login"}>
-                    <button style={{ marginTop: "20px" }} onClick={changeLogin}>
+                    <button style={{ marginTop:"10px" ,paddingTop:"0.5px" }} onClick={changeLogin}>
                       <RiUser3Line />
                       <span>JOBSEEKER LOGIN</span>
                     </button>
                   </NavLink>
-                  <p>Login as Employer instead</p>
                 </li>
               )}
             </ul>
