@@ -20,20 +20,34 @@ const ForEmployeers = () => {
           </div>
         </div> */}
         <div className={styles.employeers} >
-          <img style={{textAlign:"left",height:"400px"}} src="IT.png" alt="It" />
+          <img style={{textAlign:"left",height:"400px"}} className={styles.backgroundimg} src="IT.png" alt="It" />
           <div className={styles.body} >
-            <Text> AI in Recruting Technology </Text>
-            <Text> Conversional UI</Text>
-            <Text> Data Security</Text>
-            <Text> Power Recruiting</Text>
-            <Text> Introducing</Text>
-            <Text> Monster Better Together Experience</Text>  
+            <Text style={{display:"flex",gap:"10px"}} > <img src="icon-bg.png" alt="tickicon" /> <span>AI in Recruting Technology</span>  </Text>
+            <Text style={{display:"flex",gap:"10px"}}> <img src="icon-bg.png" alt="tickicon" /> Conversional UI</Text>
+            <Text style={{display:"flex",gap:"10px"}}> <img src="icon-bg.png" alt="tickicon" />Data Security</Text>
+            <Text style={{display:"flex",gap:"10px"}}> <img src="icon-bg.png" alt="tickicon" />Power Recruiting</Text>
+            <br />
+            <Text style={{paddingLeft:"50px"}}> Introducing</Text>
+            <Text style={{paddingLeft:"50px"}}> <b>Monster Better Together</b> </Text>
+            <Text style={{paddingLeft:"50px"}}><b>Experience</b> </Text>  
           </div>
           <div className={styles.employeerslogin}>
             <b  >Login</b>
-            <input type="email" />
-            <input type="password" />
-            <button>Login</button>
+            <br />
+            <input className={styles.employeesinput} type="email" placeholder='Username' />
+            <br />
+            <input className={styles.employeesinput} type="password" placeholder='Password' />
+            <br />
+            <br />
+            <button className={styles.loginbtn} >Login</button>
+            <br />
+            <br />
+            <hr style={{border:"0.1px solid grey"}} />
+            <br />
+            <div style={{display:"flex",margin:"auto"}} >
+            <h5>New User?</h5>
+            <a href="/">Sign up</a>
+            </div>
           </div>
         </div>
     </div>

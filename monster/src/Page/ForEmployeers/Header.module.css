@@ -15,16 +15,68 @@
     background-image: url("/public/BG.png");
     background-repeat: no-repeat;
     height: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     width: 100%;
 }
 .body{
     text-align: left;
     font-size: 25px;
     color: white;
+    padding-top: 20px;
+    height: auto;
 }
 .employeerslogin{
+    border: 1px solid black;
     color: black;
     background-color: white;
-    height: 100%;
+    text-align: center;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.loginbtn{
+    background-color: #5d4da8;
+    width: 80%;
+    text-align: center;
+    color: white;
+    height: 40px;
+}
+.employeesinput{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: white;
+    outline-color: white;
+    width: 80%;
+    border-radius: none;
+}
+.employeesinput:hover{
+    outline-color: white;
+}
+
+@media screen and (min-width:320px) and (max-width:600px) {
+    .employeers{
+        background-image: url("/public/BG.png");
+        /* background-repeat: no-repeat; */
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .body{
+        text-align: left;
+        font-size: 25px;
+        color: white;
+        background-color: #3e0f66 ;
+        height: auto;
+    }
+    .employeerslogin{
+        border: 1px solid black;
+        color: black;
+        background-color: white;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
 }
