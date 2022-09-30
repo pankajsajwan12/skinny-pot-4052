@@ -15,16 +15,39 @@ import React from "react";
 import Register from "./Register";
 import { useForm } from "react-hook-form";
 import styles from "../CSS/Login.module.css";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
 
+
+
+// redux State update--
+//redux-   isAuth: false,
+    // token: "",
+    //userData:""
+    // isAuthError:false
+    //
 const Login = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const dispatch=useDispatch()
+  const selector=useSelector(state=>state.auth)
+  
+  console.log(selector)
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) =>{
+   console.log("first",data);
+   axios.post("https://monsterjobs.herokuapp.com/login",data).then((response)=>{
+    //console.log(response)
+    dispatch({type:"USER_LOGIN_SUCCESS",payload:response.data})
+   }).catch((err)=>{
+    console.log("err",err);
+    alert(err.response.data)
+   })
+  };
 
   return (
     <div>
@@ -47,7 +70,7 @@ const Login = () => {
         <DrawerContent>
           <DrawerCloseButton />
           <Text paddingLeft="20px" fontSize="3xl" fontWeight="bold">
-            Welcome!
+            Welcome! {selector.userData?.username}
           </Text>
           <Text paddingLeft="20px" fontSize="xl">Log in using your Monster credentials</Text>
           <DrawerBody>
@@ -55,6 +78,7 @@ const Login = () => {
               <div>
                 <input
                   placeholder="E-mail/Mobile"
+                  type="email"
                   className={styles.email}
                   {...register("email", { required: true })}
                 />
@@ -64,7 +88,7 @@ const Login = () => {
                 <br />
                 <br />
                 <input
-                  type="text"
+                  type="password"
                   placeholder="Password"
                   className={styles.password}
                   {...register("password", { required: true })}

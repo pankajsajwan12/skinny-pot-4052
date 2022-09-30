@@ -3,32 +3,32 @@ import * as types from "./auth.types"
 const initialState={
     isAuth: false,
     token: "",
-    isAuthLoading:false,
-    isAuthError:false
+    userData: null,
 }
 
 const authReducer=(oldState=initialState,action)=>{
     const {type,payload}=action
+    //console.log(action);
     switch(type){
         case types.USER_LOGIN_REQUEST:{
             return{
                 ...oldState,
-                isAuthLoading:true,
+                
             }
         }
         case types.USER_LOGIN_SUCCESS:{
+           // console.log(payload);
             return{
                 ...oldState,
-                isAuthLoading:false,
-                isAuth:true,
-                token:payload
+               token:payload.accessToken,
+               isAuth:true,
+               userData:payload.user,
             }
         }
         case types.USER_LOGIN_FAILURE:{
             return{
                 ...oldState,
-                isAuthLoading:false,
-                isAuthError:true,
+                userData: null,
                 isAuth:false,
                 token:""
             }

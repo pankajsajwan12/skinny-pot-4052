@@ -1,0 +1,30 @@
+.header{
+    background-color: #e8e8e8;
+    text-align: right;
+    height: 50px;
+}
+.login{
+    width: 100%;
+    background-color: #6c54da;
+    height: 50px;
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.employeers{
+    background-image: url("/public/BG.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    width: 100%;
+}
+.body{
+    text-align: left;
+    font-size: 25px;
+    color: white;
+}
+.employeerslogin{
+    color: black;
+    background-color: white;
+    height: 100%;
+}

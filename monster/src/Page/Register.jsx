@@ -166,7 +166,7 @@ const Register = () => {
             <br/>
             <div style={{display:"flex",textAlign:"left",}}>
             <input type="checkbox" style={{height:"15px",}} />
-            <span>Immediately available due to covid-19 situation</span>
+            <label>Immediately available due to covid-19 situation</label>
             </div>
             <br/>
             <label htmlFor="">Key Skills *</label>
