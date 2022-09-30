@@ -1,8 +1,10 @@
 import React from 'react'
 import Main1 from "../../../Images/Main1.png"
 import Main101 from "../../../Images/Main101.png"
+import CallBack from '../CallBack/CallBack'
 import Findjob from '../FindJob/Findjob'
 import Premium from '../Premium/Premium'
+import Research from '../Research/Research'
 import WorkFromHome from '../WorkFromHome/WorkFromHome'
 import style from "./Main.module.css"
 const jobs=[
@@ -103,6 +105,8 @@ function Main() {
         <WorkFromHome data={jobs} heading={"Recent jobs"} />
         <Premium/>
         <Findjob/>
+        <CallBack/>
+        <Research/>
     </div>
   )
 }
