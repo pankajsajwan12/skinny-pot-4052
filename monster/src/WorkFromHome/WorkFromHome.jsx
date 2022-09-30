@@ -5,14 +5,21 @@ import { getJobsData } from '../Redux/AppReducer/action'
 import style from './WorkFromHome.module.css'
 import {FaRegStar} from 'react-icons/fa'
 import {HiShare} from 'react-icons/hi'
+import { useLocation, useSearchParams } from 'react-router-dom'
 
 const WorkFromHome = () => {
     const jobs = useSelector((store) => store.AppReducer.jobs)
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    const [searchParams] = useSearchParams();
+    const location = useLocation();
 
+    console.log("location", location);
     useEffect(() => {
-       if(jobs.length === 0) {
-        dispatch(getJobsData())
+       if(location || jobs.length === 0) {
+        let getJobsParams = {
+            Role: searchParams.getAll('category')
+        }
+        dispatch(getJobsData(getJobsParams));
        }
     },[])
     console.log("jobs",jobs)

@@ -17,7 +17,8 @@ import { useEffect } from "react";
 
 const WorkFromHomeFilter = () => {
   const[searchParams, setSearchParams] = useSearchParams()
-  const [category, setCategory] = useState([])
+  const initialCategoryFilters = searchParams.getAll('category');
+  const [category, setCategory] = useState(initialCategoryFilters || []);
 
   const handleFilterCheckbox = (e) => {
     const newCategory = [...category]
@@ -35,7 +36,8 @@ const WorkFromHomeFilter = () => {
       category && (params.category = category)
       setSearchParams(params);
     }
-  })
+    console.log("searchParams",searchParams)
+  },[category, setSearchParams])
   return (
     <div>
       <Box
@@ -46,13 +48,13 @@ const WorkFromHomeFilter = () => {
       >
         Filter By{" "}
       </Box>
-      <Accordion >
+      <Accordion defaultIndex={[0]} allowMultiple>
         <AccordionItem>
           {({ isExpanded }) => (
             <>
               <h2>
                 <AccordionButton>
-                  <Box flex="1" textAlign="left" w="1">
+                  <Box flex="1" textAlign="left" w="1" fontWeight='bold'>
                     Function
                   </Box>
                   {isExpanded ? (
