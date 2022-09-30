@@ -1,6 +1,6 @@
 import './App.css';
 import MainRoutes from './Components/MainRoutes';
-import Navbar from './Components/Navbar';
+import Navbar from './Components/Navbar/Navbar';
 
 function App() {
   return (
