@@ -1,0 +1,71 @@
+.jobPostingTime_rightSide{
+    padding-left: 1rem;
+    display: flex;
+}
+
+.WorkDetails_main{
+    width: 100%;
+    display: flex;
+    margin-left: 3%;
+}
+.WorkDetails_main_leftMain{
+    width: 70%;
+}
+.WorkDetails_main_RightMain{
+    margin-top: 7%;
+    width: 15%;
+}
+.reactIcons{
+    margin:  0.4rem;
+}
+.icons{
+    width: 30px;
+    height: 30px;
+}
+
+.smallJobDetails_Div ,.WorkDetailsPage_jobDescription_Main{
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    text-align: left;
+    padding : 1rem 1rem;
+}
+.WorkDetailsPage_jobDescription_Main{
+
+}
+.companyName{
+    color: rgb(108,154,235)
+}
+.pText{
+    padding-top: 0.2rem;
+    font-size: 1.1rem;
+}
+.FaUser_icons{
+    width: 20px;
+    height: 25px;
+    color: white;
+}
+.JobDetails_card{
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    margin-top: 2rem;
+    background-color: white;
+    padding : 1.5rem 1.5rem
+}
+.Employment_text{
+    font-size: 1.1rem;
+    width: 10px;
+    font-weight: 500;
+}
+.roundBox_skill{
+    width: 8.3rem;
+    font-size: 1.2rem;
+    height: 3rem;
+    margin: 0.4rem;
+    padding-top: 0.5rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 1.3rem;
+    background-color: rgb(234,234,234);
+}

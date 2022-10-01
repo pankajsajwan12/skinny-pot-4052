@@ -5,7 +5,7 @@ import { getJobsData } from '../Redux/AppReducer/action'
 import style from './WorkFromHome.module.css'
 import {FaRegStar} from 'react-icons/fa'
 import {HiShare} from 'react-icons/hi'
-import { useLocation, useSearchParams } from 'react-router-dom'
+import { Link, useLocation, useSearchParams } from 'react-router-dom'
 
 const WorkFromHome = () => {
     const jobs = useSelector((store) => store.AppReducer.jobs)
@@ -57,6 +57,7 @@ const WorkFromHome = () => {
         jobs.map((item) => {
             return (
                 <>
+                <Link to={`/work-from-home-jobs/${item.id}`}>
                 <div key={item.id} className={style.Job_mainDiv}>
                     <div className={style.JobPosition}>{item.Role}</div>
                     <div className={style.companyName}><p>Company Name &nbsp; : &nbsp;{ item.CompanyName}</p></div>
@@ -67,7 +68,7 @@ const WorkFromHome = () => {
                     <div className={style.jobDeatails}>{item.Description}</div>
                     <div className={style.jobSkill}><bold>Location </bold> &nbsp; : &nbsp; {item.Location}</div>
                 </div>
-                
+                </Link>
                 <div className={style.jobPostingTime}>
                         <div className={style.jobPostingTime_leftSide}>
                             <p>Posted : a hour age | </p>
