@@ -95,6 +95,24 @@
     grid-template-columns: repeat(3,1fr);
     
 }
+.bottom{
+    height: 100px;
+    width:100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+    gap:10px
+}
+.connectwithusbtn{
+    background-color: #5d4da8;
+    color: white;
+    height:60px;
+    padding: 10px;
+    border-radius: 40px;
+}
 @media screen and (min-width:320px) and (max-width:600px) {
     .employeers{
         background-image: url("/public/BG.png");
