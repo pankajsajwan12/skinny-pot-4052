@@ -147,6 +147,12 @@ const ForEmployeers = () => {
             <button className={styles.knowmore}>KNOW MORE</button>
           </div>
         </div>
+        <br />
+        <br />
+        <div className={styles.bottom} >
+          <Text fontSize="2xl" >Many more hiring solutions</Text>
+          <button className={styles.connectwithusbtn} >Connect with us</button>
+        </div>
       </div>
     </div>
   );
