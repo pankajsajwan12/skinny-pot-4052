@@ -1,0 +1,45 @@
+.email{
+    padding-left: 25px;
+    background: url("https://img.icons8.com/ios-glyphs/30/000000/guest-male.png") no-repeat left;
+    background-size: 20px;
+}
+.password{
+    padding-left: 25px;
+    background: url("https://img.icons8.com/ios-glyphs/30/000000/lock--v1.png") no-repeat left;
+    background-size: 20px;
+}
+.login{
+    width: 100%;
+    background-color: #6c54da;
+    height: 50px;
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.google{
+    display: flex;
+    border: 1px solid black;
+    gap:10px;
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+}
+.google:hover{
+    background-color: #ff0000;
+    color: white;
+}
+.facebook{
+    display: flex;
+    border: 1px solid black;
+    gap:10px;
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+}
+.facebook:hover{
+    background-color: #4267b2 ;
+    color: white;
+}
+
+.jobseekerbtn:hover{
+    background-color: #f5a623;
+    color: white;
+}

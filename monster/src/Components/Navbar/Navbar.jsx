@@ -3,16 +3,19 @@ import React from "react";
 import { AiOutlineDashboard } from "react-icons/ai";
 import { FaBell, FaUserCircle } from "react-icons/fa";
 import { RiUser3Line } from "react-icons/ri";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useEffect } from "react";
-  const Navbar = () => {
+import Login from "../../Page/Login";
+import { useSelector } from "react-redux";
+import { Button } from "@chakra-ui/react";
+const Navbar = () => {
   const [login, setLogin] = React.useState(false);
   const x = JSON.parse(localStorage.getItem("loggedin"));
   useEffect(() => {
     if (x === "1") setLogin(true);
     else setLogin(false);
   }, []);
- const [show, setShow] = React.useState(0);
+  const [show, setShow] = React.useState(0);
 
   const dropdown = (a) => {
     setShow(a);
@@ -20,17 +23,18 @@ import { useEffect } from "react";
   const hide = () => {
     setShow(0);
   };
-  const changeLogin = () => {
-  };
+  const changeLogin = () => {};
+  const selector = useSelector((state) => state.auth);
+  console.log(selector);
 
   return (
     <div className={styles.home_nav}>
       <div>
         {/* <NavLink to={"/"}> */}
-          <img
-            src="https://media.monsterindia.com/trex/public/default/images/monster-logo.svg"
-            alt=""
-          />
+        <img
+          src="https://media.monsterindia.com/trex/public/default/images/monster-logo.svg"
+          alt=""
+        />
         {/* </NavLink> */}
         <div className={styles.home_nav_ele}>
           <div>
@@ -150,49 +154,24 @@ import { useEffect } from "react";
                 )}
               </li>
             </ul>
-            <ul className={styles.user_info}>
-              <li>
-                <div>
-                  {/* <h5>job effected by covid-19</h5> */}
-                  <div>
-                    {/* <input type="radio" name="Yes" /> */}
-                    {/* <span>Yes</span> */}
-                  </div>
-                </div>
-              </li>
-              {login ? (
-               <> 
-                  <li>
-                    <div>
-                      {/* <AiOutlineDashboard style={{ fontSize: "30px" }} /> */}
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      {/* <FaBell style={{ fontSize: "30px" }} /> */}
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      {/* <FaUserCircle style={{ fontSize: "30px" }} /> */}
-                    </div>
-                  </li>
-                </>
-              ) : (
-                <li className={styles.login}>
-                  <NavLink to={"/login"}>
-                    <button style={{ marginTop:"10px" ,paddingTop:"0.5px" }} onClick={changeLogin}>
-                      <RiUser3Line />
-                      <span>JOBSEEKER LOGIN</span>
-                    </button>
-                  </NavLink>
-                </li>
-              )}
-            </ul>
+            {/* <ul className={styles.user_info}> */}
+              <Login />
+            {/* </ul> */}
+            <div >
+            <Link to="/for-employeers">
+              <Button
+                colorScheme="white"
+                className={styles.foremployeersbtn}
+                style={{ color: "black", border: "1px solid black" }}
+              >
+                FOR EMPLOYEERS
+              </Button>
+            </Link>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
-export default Navbar
+};
+export default Navbar;
