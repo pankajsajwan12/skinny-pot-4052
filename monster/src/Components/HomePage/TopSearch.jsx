@@ -3,18 +3,20 @@ import style from "./TopSearch.module.css";
 import { IoIosSearch } from "react-icons/io";
 import { IoMicOutline } from "react-icons/io5";
 import RightContainer from "./RightContainer";
+import { Link } from "react-router-dom";
 
 const TopSearch = () => {
   return (
     <div className={style.topSearch}>
+      
       <div className={style.leftContainer}>
         <div className={style.searchBox}>
           <p className={style.header}>5000,000+ Jobs. Find Better.Faster</p>
           <ul>
-            <li>All Jobs</li>
-            <li>Work From Home</li>
-            <li>Contract Jobs</li>
-            <li>Fresher Jobs</li>
+            <li><Link to="/work-from-home-jobs">All Jobs</Link></li>
+            <li><Link to="/work-from-home-jobs">Work From Home</Link></li>
+            <li><Link to="/work-from-home-jobs">Contract Jobs</Link></li>
+            <li><Link to="/work-from-home-jobs">Fresher Jobs</Link></li>
           </ul>
           <div className={style.searchDiv}>
             <div className={style.searchInput}>

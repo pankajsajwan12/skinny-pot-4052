@@ -1,0 +1,52 @@
+
+.findjob{
+    border: 1px solid  hsla(0,0%,72%,.25);
+    padding: 20px;
+    background: white;
+    margin-top: 10px;
+    display: block;
+}
+.findjob>h1{
+    font-size: 25px;
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+.findjob>div>ul{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.findjob>div>ul li{
+    all: unset;
+    font-weight: bold;
+}
+.findjob>div:last-child{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    width: 80%;
+    margin: auto;
+}
+.findjob>div:last-child>div{
+    width: 25%;
+    /* text-align: left; */
+}
+.findjob>div:last-child ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    width: 80%;
+    margin: auto;
+}
+.findjob>div:last-child li{
+    all: unset;
+}
+@media (min-width: 200px) and (max-width: 650px) {
+    .findjob{
+        display: none;
+    }
+}

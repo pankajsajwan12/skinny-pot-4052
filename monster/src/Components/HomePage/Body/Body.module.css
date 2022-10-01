@@ -1,0 +1,29 @@
+
+.body{
+    width: 75%;
+    /* border: 1px solid red; */
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    /* max-width: 75%; */
+}
+/* .body>div{
+    border: 1px solid blue;
+} */
+
+.body>div:first-child{
+    width:100%;
+    max-width: 75%;
+}
+.body>div:last-child{
+    width:40%;
+}
+@media (min-width: 200px) and (max-width: 740px) {
+   .body{
+    width: 90%;
+   }
+   .body>div:first-child{
+    width:100%;
+    max-width: 100%;
+}
+}

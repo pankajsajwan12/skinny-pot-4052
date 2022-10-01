@@ -1,0 +1,131 @@
+.header{
+    background-color: #e8e8e8;
+    text-align: right;
+    height: 50px;
+}
+.login{
+    width: 100%;
+    background-color: #6c54da;
+    height: 50px;
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.employeers{
+    background-image: url("/public/BG.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+}
+.body{
+    text-align: left;
+    font-size: 25px;
+    color: white;
+    padding-top: 20px;
+    height: auto;
+}
+.employeerslogin{
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    text-align: center;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.loginbtn{
+    background-color: #5d4da8;
+    width: 80%;
+    text-align: center;
+    color: white;
+    height: 40px;
+}
+.employeesinput{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: white;
+    outline-color: white;
+    width: 80%;
+    border-radius: none;
+}
+.employeesinput:hover{
+    outline-color: white;
+}
+.servicesbuttons{
+    display:flex;
+    gap:10px;
+    text-align: center;
+    justify-content: center;
+}
+.servicesbtn{
+    background-color: #f5f5f5 ;
+    height: 50px;
+    padding: 10px;
+    font-weight: 400;
+    
+}
+.servicesbtn:hover{
+    background-color: #5d4da8;
+    color: white;
+    border: 1px solid black;
+    font-weight: 400;
+}
+.database{
+    height: 100%;
+    width: 350px;
+    text-align: left;
+    /* border: 1px solid black; */
+}
+.knowmore{
+    color: blue;
+    font-weight: 500;
+    padding: 10px;
+    border: 1px solid blue;
+}
+.knowmore:hover{
+    background-color: #5d4da8;
+    color: white;
+    font-weight: 500;
+}
+.services{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+@media screen and (min-width:320px) and (max-width:600px) {
+    .employeers{
+        background-image: url("/public/BG.png");
+        /* background-repeat: no-repeat; */
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .body{
+        text-align: left;
+        font-size: 25px;
+        color: white;
+        background-color: #3e0f66 ;
+        height: auto;
+    }
+    .employeerslogin{
+        border: 1px solid black;
+        color: black;
+        background-color: white;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .services{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap:10px;
+    }
+    .servicesbuttons{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}

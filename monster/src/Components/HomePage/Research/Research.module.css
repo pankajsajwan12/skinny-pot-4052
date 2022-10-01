@@ -1,0 +1,50 @@
+
+.container{
+    border: 1px solid  hsla(0,0%,72%,.25) ;
+    background: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+.container>h1{
+    text-align: left;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.container>div{
+    border: 1px solid  hsla(0,0%,72%,.25);
+    margin: 20px;
+    background: #f5f5f5;
+    padding: 20px;
+}
+.container>div>div:first-child{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container>div>div:first-child p{
+    font-size: 17px;
+    font-weight: bold;
+}
+.container img{
+    width: 30px;
+}   
+
+.container>div>div:nth-child(2){
+    text-align: left;
+    color: rgb(159, 159, 159);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.container>div>div:last-child{
+    text-align: right;
+    color: #7159db ;
+    margin-bottom: 50px;
+    margin-right: 20px;
+}
+@media (min-width: 200px) and (max-width: 650px) {
+    .container>div>div:last-child{
+        margin-bottom: 20px;
+    }
+}

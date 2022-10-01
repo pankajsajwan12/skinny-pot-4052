@@ -1,0 +1,31 @@
+
+
+.jobBySkills{
+    border: 1px solid hsla(0,0%,72%,.25);
+    margin-top: 10px;
+    background: white;
+}
+.jobBySkills>h3{
+    font-size: 20px;
+    border-bottom: 1px solid hsla(0,0%,72%,.25);
+    padding: 10px;
+    /* font-weight: 400; */
+    margin-bottom: 20px;
+}
+.jobBySkills>p{
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.right{
+    display: block;
+}
+
+@media (min-width: 200px) and (max-width: 740px) {
+    .right{
+        display: none;
+    }
+   
+}

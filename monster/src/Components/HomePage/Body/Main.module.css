@@ -1,0 +1,20 @@
+
+
+.main1{
+    display:block;
+}
+.main101{
+    display: none;
+    margin: auto;
+}
+
+@media (min-width: 200px) and (max-width: 740px) {
+    .main1{
+        display: none;
+    }
+    .main101{
+        display: block;
+    }
+    
+   
+}
