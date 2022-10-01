@@ -11,17 +11,23 @@ const WorkFromHome = () => {
     const jobs = useSelector((store) => store.AppReducer.jobs)
     const dispatch = useDispatch();
     const [searchParams] = useSearchParams();
-    const location = useLocation();
+    const locations = useLocation();
 
-    console.log("location", location);
+    console.log("Experience",searchParams.getAll('years'))
+    // console.log("location", location);
     useEffect(() => {
-       if(location || jobs.length === 0) {
+       if(locations || jobs.length === 0) {
         let getJobsParams = {
-            Role: searchParams.getAll('category')
+            params : {
+                CompanyName: searchParams.getAll('companyName'),
+                Experience : searchParams.getAll('years'),
+                Location : searchParams.getAll('location')
+            }
         }
+        console.log("getJobsParams :",getJobsParams)
         dispatch(getJobsData(getJobsParams));
        }
-    },[])
+    },[locations.search])
     console.log("jobs",jobs)
   return (
     <div className={style.WorkFromHome_Left_JobDetails_Pages}>
@@ -59,7 +65,7 @@ const WorkFromHome = () => {
                         <div>Salary &nbsp; : &nbsp;{item.Salary}</div>
                     </div>
                     <div className={style.jobDeatails}>{item.Description}</div>
-                    <div className={style.jobSkill}></div>
+                    <div className={style.jobSkill}><bold>Location </bold> &nbsp; : &nbsp; {item.Location}</div>
                 </div>
                 
                 <div className={style.jobPostingTime}>

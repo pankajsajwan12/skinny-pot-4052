@@ -2,6 +2,7 @@ import * as types  from './actionType'
 import axios from 'axios'
 
 export const getJobsData = (params) => (dispatch) => {
+    console.log("params",params);
     dispatch({type : types.GET_JOBS_REQUEST})
     return axios.get('https://monsterjobs.herokuapp.com/JobData',params)
     .then((res) => {
