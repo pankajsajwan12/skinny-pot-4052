@@ -1,0 +1,55 @@
+.google{
+    display: flex;
+    border: 1px solid black;
+    gap:10px;
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+}
+.google:hover{
+    background-color: #ff0000;
+    color: white;
+}
+.facebook{
+    display: flex;
+    border: 1px solid black;
+    gap:10px;
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+}
+.facebook:hover{
+    background-color: #4267b2 ;
+    color: white;
+}
+.hide{
+    display: none;
+}
+Select:invalid{
+    color: rgb(165, 161, 161);
+}
+input{
+    border: 1px solid grey;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+}
+input:focus{
+    outline-color: rgb(55, 55, 247);
+}
+.registerbtn{
+    background-color: #57b228;
+    color: white;
+    height: 50px;
+    float: right;
+    border-radius: 5px;
+    width: 120px;
+}
+.register{
+    width: 80%;
+    background-color: #6c54da;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+}
+.register:hover{
+    background-color: #3d2b8de5;
+}
