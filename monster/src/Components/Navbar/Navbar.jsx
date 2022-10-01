@@ -1,15 +1,23 @@
 import styles from "./Navbar.module.css";
-import React from "react";
-import { AiOutlineDashboard } from "react-icons/ai";
-import { FaBell, FaUserCircle } from "react-icons/fa";
-import { RiUser3Line } from "react-icons/ri";
+import React, { useState } from "react";
+// import { AiOutlineDashboard } from "react-icons/ai";
+// import { FaBell, FaUserCircle } from "react-icons/fa";
+// import { RiUser3Line } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import Login from "../../Page/Login";
 import { useSelector } from "react-redux";
 import { Button } from "@chakra-ui/react";
+import Hamburger from "./Hamburger";
+import { ExternalLinkIcon, HamburgerIcon } from "@chakra-ui/icons";
 const Navbar = () => {
   const [login, setLogin] = React.useState(false);
+  const [isCheckout, setIsCheckout] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+
+  function setOpen(value) {
+    setIsOpen(value);
+  }
   const x = JSON.parse(localStorage.getItem("loggedin"));
   useEffect(() => {
     if (x === "1") setLogin(true);
@@ -31,17 +39,30 @@ const Navbar = () => {
     <div className={styles.home_nav}>
       <div>
         {/* <NavLink to={"/"}> */}
-        <img
-          src="https://media.monsterindia.com/trex/public/default/images/monster-logo.svg"
-          alt=""
-        />
+        <div onClick={() => setIsOpen(true)} className={styles.Hamburger}>
+          <HamburgerIcon boxSize={"2em"} />
+        </div>
+        <div>
+          <Link to="/">
+          <img
+            src="https://media.monsterindia.com/trex/public/default/images/monster-logo.svg"
+            alt=""
+          />
+          </Link>
+        </div>
+        <div className={styles.loginn}>
+          <p>
+            {" "}
+            <Login />
+          </p>
+        </div>
         {/* </NavLink> */}
         <div className={styles.home_nav_ele}>
           <div>
-            <ul>
+            <ul className={styles.hidding}>
               <li onMouseEnter={() => dropdown(1)} onMouseLeave={hide}>
                 <label htmlFor="job search">
-                  <a href="#a">JOB SEARCH</a>
+                  <Link to={"/job-search"}>JOB SEARCH</Link>
                 </label>
                 {show === 1 ? (
                   <>
@@ -65,7 +86,7 @@ const Navbar = () => {
               </li>
               <li onMouseEnter={() => dropdown(2)} onMouseLeave={hide}>
                 <label htmlFor="Work">
-                  <a href="#a">WORK FROM HOME</a>
+                  <Link to="/work-from-home-jobs">WORK FROM HOME</Link>
                 </label>
                 {show === 2 ? (
                   <>
@@ -155,20 +176,24 @@ const Navbar = () => {
               </li>
             </ul>
             {/* <ul className={styles.user_info}> */}
-              <Login />
+            <Login />
             {/* </ul> */}
-            <div >
-            <Link to="/for-employeers">
-              <Button
-                colorScheme="white"
-                className={styles.foremployeersbtn}
-                style={{ color: "black", border: "1px solid black" }}
-              >
-                FOR EMPLOYEERS
-              </Button>
-            </Link>
+            <div className={styles.hidding}>
+              <Link to="/for-employeers">
+                <Button
+                  colorScheme="white"
+                  className={styles.foremployeersbtn}
+                  style={{ color: "black", border: "1px solid black" }}
+                >
+                  FOR EMPLOYEERS
+                </Button>
+              </Link>
             </div>
           </div>
+        </div>
+
+        <div>
+          <Hamburger isOpen={isOpen} setOpen={setOpen} />
         </div>
       </div>
     </div>

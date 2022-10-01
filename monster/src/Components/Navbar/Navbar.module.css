@@ -8,22 +8,25 @@
   left: 0;
   background: #f5f5f5;
   box-shadow: 0px 1px 5px #888888;
+  
 }
 .home_nav > div:nth-child(1) {
-  max-width: 1188px;
+  /* max-width: 100%; */
   height: 70px;
   margin: auto;
   display: flex;
   flex-direction: row;
+
 }
 .home_nav img {
   margin: 15px 0;
   min-width: 135px;
   height: 36px;
   padding-right:60px;
+  margin-left: 50px;
 }
 .home_nav_ele {
-  min-width: 85%;
+  /* min-width: 85%; */
   height: 70px;
   font-weight: 400;
   line-height: 18px;
@@ -36,7 +39,8 @@
   display: flex;
   flex-direction: row;
   padding: 0px;
-  padding-top:20px
+  padding-top:20px;
+
 }
 .home_nav_ele > div > ul {
   display: flex;
@@ -590,4 +594,84 @@ div {
 .foremployeersbtn:hover{
   background-color: #f5a623;
   color: white;
+}
+
+.Hamburger{
+margin: auto; 
+display: none;
+
+}
+.loginn{
+  display: none;
+}
+.loginn span{
+  display: block;
+}
+@media (min-width: 200px) and (max-width: 1220px) {
+  .home_nav_ele > div {
+    display: none;
+  }
+  .footer_table{
+    display: none;
+  }
+  .footer_contact{
+    display: none;
+  }
+  .footer_info{
+    display: none;
+    
+  }
+  .Hamburger{
+    display: block;
+
+  }
+  .home_nav>div{
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: space-around;
+    align-items: center; */
+  }
+  .home_nav img{
+    /* margin-left: 0px; */
+    margin: o;
+    padding: 0;
+  }
+  .home_nav>div>div{
+    margin-left: 20px;
+  }
+  .loginn{
+    display: block;
+    /* font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    background: #7159db ;
+    padding: 5px;
+    border-radius: 5px; */
+    padding-top: 20px;
+    
+  }
+  .loginn span{
+    font-size: 12px;
+  }
+}
+@media (min-width: 200px) and (max-width: 520px) {
+  .loginn span{
+    display: none;
+  }
+}
+.foremployeersbtn{
+  margin-left: 20px;
+}
+
+.Hamburger div{
+  border-bottom: 1px solid #d1d1d1;
+  padding: 15px;
+  width: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import style from "./TopSearch.module.css"
 
 function RightContainer2() {
@@ -6,7 +7,7 @@ function RightContainer2() {
     <div className={style.rightContainer2}>
       <div className={style.uploadResume}>
         <p>NEW TO MONSTER?</p>
-        <p>REGISTER WITH US</p>
+        <p><Link to="/for-employeers" >REGISTER WITH US</Link></p>
         <p>Or</p>
         <button>
           <span>UPLOAD RESUME</span> <br /> We will create you profile
