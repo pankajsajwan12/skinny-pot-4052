@@ -6,13 +6,13 @@
 .WorkFromHomes_Main{
     width: 100%;
     padding-top: 8%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
 }
 .WorkFromHomeFilters{
     background-color: white;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     height: 95vh;
     width: 21%;
 }
@@ -22,7 +22,7 @@
 .WorkFromHome_Left_JobDetails_Pages{
     width: 80.5%;
     margin-left: 3%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
 }

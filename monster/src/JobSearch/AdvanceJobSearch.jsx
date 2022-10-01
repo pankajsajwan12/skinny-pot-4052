@@ -2,7 +2,8 @@ import React from 'react'
 import style from './jobSearch.module.css'
 import {BiSearch} from 'react-icons/bi';
 import { BsFillBriefcaseFill } from "react-icons/bs";
-import { GrLocation } from 'react-icons/gr'
+import { GrLocation } from 'react-icons/gr';
+import { Box, Button } from "@chakra-ui/react";
 
 const AdvanceJobSearch = () => {
   return (
@@ -12,19 +13,19 @@ const AdvanceJobSearch = () => {
     <div className={style.AdvanceJobSearch}>
       <div className={style.FormStyle_left}>
         <form >
-            <div className={style.fromKeyword}>
-                <BiSearch />
+            <Box className={style.fromKeyword} display='flex'>
+                <BiSearch className={style.inputIcons}/>
                 <input type="text" placeholder='Keyword'/>
-            </div>
+            </Box>
             <div className={style.ExpericenceAndLocation_Input}>
-                <div className={style.exInput}>
-                <BsFillBriefcaseFill />
+                <Box className={style.exInput} display='flex'>
+                <BsFillBriefcaseFill  className={style.inputIcons}/>
                 <input type="text" placeholder='Experience' />
-                </div>
-                <div className={style.exInput_location}>
-                  <GrLocation/> 
+                </Box>
+                <Box display='flex' className={style.exInput_location}>
+                  <GrLocation className={style.inputIcons}/> 
                   <input type="text" placeholder='Location' />
-                </div>
+                </Box>
             </div>
             <div className={style.fromKeyword}>
                 <input type="text" placeholder='Industry' />
@@ -53,10 +54,10 @@ const AdvanceJobSearch = () => {
                     <option value="30000">30000</option>
                  </select>
                </div>
-               <div className={style.jobsCheckbox}>
-                 <input type="checkbox"/>
-                 <label> Jobs that don't include salary</label>
-              </div> 
+               <Box display='flex' className={style.jobsCheckbox} >
+                 <input type="checkbox" style={{height:'20px',marginLeft:'0.1rem',width:'25px'}}/>
+                 <Box ml='1.5rem'> Jobs that don't include salary</Box>
+              </Box> 
             </div>
             <div className={style.submitButton}>
                 <button type='submit'className={style.btn}> Search</button>
