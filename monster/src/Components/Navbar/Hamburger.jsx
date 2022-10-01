@@ -42,7 +42,7 @@ export default function Hamburger({ isOpen, setOpen }) {
             
               <Link to={"/job-search"}>
                 <div onClick={()=>onClose()} >
-                  <p> JOBJ SEARCH</p>
+                  <p> JOB SEARCH</p>
                   <ChevronRightIcon />
                 </div>
               </Link>
