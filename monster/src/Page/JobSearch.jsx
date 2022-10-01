@@ -6,7 +6,7 @@ const JobSearch = () => {
   return (
     <div>
       <AdvanceJobSearch />
-      <JobSearchBottom />
+      {/* <JobSearchBottom /> */}
     </div>
   )
 }

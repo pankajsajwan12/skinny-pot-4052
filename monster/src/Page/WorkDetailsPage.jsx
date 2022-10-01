@@ -260,8 +260,18 @@ const WorkDetailsPage = () => {
         </div>
       </div>
       <div className={style.WorkDetails_main_RightMain}>
-        <Box>
-          hello
+        <Box width='90%' backgroundColor='white'pb='1rem' >
+           <Box fontWeight='bold'pt='4'fontSize='1rem'>NEW TO MONSTER ? </Box>
+           <Box fontWeight='bold'pt='4'fontSize='1rem' color="rgb(108,84,219)">REGISTER WITH US</Box>
+           <Box display='flex'>
+              <p style={{borderBottom:'1px solid #ccc',width:'40%',marginLeft:'1rem'}}></p>
+              <p style={{paddingTop:'0.5rem'}}>OR</p>
+              <p style={{borderBottom:'1px solid #ccc',width:'43%',marginLeft:'1rem'}}></p>
+           </Box>
+           <Box backgroundColor='rgb(245,166,35)' width='90%'margin='auto'mt="1rem" mb="1rem">
+             <Box fontWeight='bold'pt='4'fontSize='1rem' color='white'>UPLOAD RESUME</Box>
+             <Box  pb='4'fontSize='1rem' color='white'>We Will create your profile</Box>
+           </Box>
         </Box>
       </div>
     </div>

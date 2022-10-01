@@ -6,14 +6,13 @@
 .WorkDetails_main{
     width: 100%;
     display: flex;
-    margin-left: 3%;
 }
 .WorkDetails_main_leftMain{
     width: 70%;
 }
 .WorkDetails_main_RightMain{
     margin-top: 7%;
-    width: 15%;
+    width: 27%;
 }
 .reactIcons{
     margin:  0.4rem;

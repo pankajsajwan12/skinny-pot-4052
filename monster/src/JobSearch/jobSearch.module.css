@@ -28,9 +28,8 @@
 .fromKeyword{
     width: 90%;
     margin: auto;
-    height: 42px;
+    height: 45px;
     border: 1px solid #ccc;
-    padding: 10px 30px 11px 36px;
     margin-top: 1.2rem;
     text-align: left;
 }
@@ -45,15 +44,20 @@ input{
     display: flex;
     margin: auto;
 }
-.exInput, .exInput_location{
-    height: 42px;
+.exInput{
     width: 49%;
     margin-top: 1.2rem;
-    padding-top: 10px;
     border: 1px solid #ccc;
 }
 .exInput_location{
     margin-left: 1rem;
+    width: 49%;
+    margin-top: 1.2rem;
+    border: 1px solid #ccc;
+}
+.inputIcons{
+    margin-top: 0.9rem;
+    margin-left: 0.5rem;
 }
 
  .submitButton{
@@ -82,10 +86,14 @@ input{
     border: 1px solid #ccc;
 }
 .jobsCheckbox, .maximumSalary{
+    width: 30%;
     margin-left: 1rem;
     height: 42px;
     padding-top: 10px;
     margin-top: 1.2rem;
+}
+.jobsCheckbox{
+    width: 40%;
 }
 .FromStyle_Right{
     margin-left: 2%;
