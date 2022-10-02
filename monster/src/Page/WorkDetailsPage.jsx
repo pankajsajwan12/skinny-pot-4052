@@ -7,6 +7,8 @@ import style from "../CSS/WorkDetails.module.css";
 import { FaRegStar,FaUserAlt } from "react-icons/fa";
 import { HiShare } from "react-icons/hi";
 import { Box, Button } from "@chakra-ui/react";
+import { Footer } from "../Components/Footer/Footer";
+import Navbar from "../Components/Navbar/Navbar";
 
 const WorkDetailsPage = () => {
   const [curentJob, setCurrentJob] = useState([]);
@@ -31,6 +33,8 @@ const WorkDetailsPage = () => {
     }
   }, [id, curentJob]);
   return (
+    <>
+    <Navbar />
     <div className={style.WorkDetails_main}>
       <div className={style.WorkDetails_main_leftMain}>
         <Box className={style.WorkDetails_main_leftMain_TopSection}
@@ -275,6 +279,8 @@ const WorkDetailsPage = () => {
         </Box>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 

@@ -16,6 +16,12 @@
     height: 95vh;
     width: 21%;
 }
+.WorkFromHomeFilterComponents input{
+    border: 1px solid black;
+    height: 20px;
+    width: 30px;
+    
+}
 .WorkFromHomes{
     width: 67%;
 }

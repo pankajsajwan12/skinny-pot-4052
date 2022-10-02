@@ -79,9 +79,10 @@ const WorkFromHomeFilter = () => {
       setSearchParams(params);
     }
   },[companyName,years,location, setSearchParams])
-  // console.log("searchParams",searchParams)
+
+
   return (
-    <div>
+    <div className={style.WorkFromHomeFilterComponents}>
       <Box
         borderBottom="1px solid black"
         textAlign="left"
@@ -118,7 +119,8 @@ const WorkFromHomeFilter = () => {
                   <p>(1349)</p>
                 </Box>
                 <Box className={style.boxIcons}> 
-                  <p><input 
+                  <p>
+                    <input 
                         type="checkbox"
                         value="Health Care"
                         onChange={handleFilterCheckbox}
