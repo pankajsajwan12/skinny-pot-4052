@@ -113,7 +113,7 @@
     padding: 10px;
     border-radius: 40px;
 }
-@media screen and (min-width:320px) and (max-width:600px) {
+@media screen and (min-width:320px) and (max-width:620px) {
     .employeers{
         background-image: url("/public/BG.png");
         /* background-repeat: no-repeat; */
@@ -145,5 +145,25 @@
     .servicesbuttons{
         display: grid;
         grid-template-columns: repeat(1,1fr);
+    }
+}
+@media screen and (min-width:621px) and (max-width:840px){
+    .services{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:10px;
+    }
+    .employeers{
+        background-image: url("/public/BG.png");
+        /* background-repeat: no-repeat; */
+        height: fit-content;
+        background-color: #3e0f66;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .employeerslogin{
+        margin: auto;
+        justify-content: center;
+        text-align: center;
     }
 }
