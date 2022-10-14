@@ -33,7 +33,6 @@ const Navbar = () => {
   };
   const changeLogin = () => {};
   const selector = useSelector((state) => state.auth);
-  console.log(selector);
 
   return (
     <div className={styles.home_nav}>
@@ -153,7 +152,7 @@ const Navbar = () => {
                   <></>
                 )}
               </li>
-              <li onMouseEnter={() => dropdown(5)} onMouseLeave={hide}>
+              <li style={{marginRight:"150px"}}  onMouseEnter={() => dropdown(5)} onMouseLeave={hide}>
                 <label htmlFor="Work">
                   <a href="#a">MORE</a>
                 </label>

@@ -19,35 +19,36 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { BsPersonFill } from "react-icons/bs";
 
-
-
 // redux State update--
 //redux-   isAuth: false,
-    // token: "",
-    //userData:""
-    // isAuthError:false
-    //
+// token: "",
+//userData:""
+// isAuthError:false
+//
 const Login = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-  const dispatch=useDispatch()
-  const selector=useSelector(state=>state.auth)
-  
-  console.log(selector)
+  const dispatch = useDispatch();
+  const selector = useSelector((state) => state.auth);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) =>{
-   console.log("first",data);
-   axios.post("https://monsterjobs.herokuapp.com/login",data).then((response)=>{
-     dispatch({type:"USER_LOGIN_SUCCESS",payload:response.data})
-     console.log(response.data)
-   }).catch((err)=>{
-    console.log("err",err);
-    alert(err.response.data)
-   })
+  const onSubmit = (data) => {
+    console.log("first", data);
+    axios
+      .post("https://monsterjobs.herokuapp.com/login", data)
+      .then((response) => {
+        dispatch({ type: "USER_LOGIN_SUCCESS", payload: response.data });
+        console.log(response.data);
+        alert("login successful");
+      })
+      .catch((err) => {
+        console.log("err", err);
+        alert(err.response.data);
+      });
   };
 
   return (
@@ -56,10 +57,10 @@ const Login = () => {
         ref={btnRef}
         colorScheme="white"
         className={styles.jobseekerbtn}
-        style={{ color:"black", border: "1px solid black",display:"flex" }}
+        style={{ color: "black", border: "1px solid black", display: "flex" }}
         onClick={onOpen}
       >
-      <BsPersonFill /> <span>JOBSEEKERLOGIN</span> 
+        <BsPersonFill /> <span>JOBSEEKERLOGIN</span>
       </Button>
       <Drawer
         isOpen={isOpen}
@@ -72,10 +73,11 @@ const Login = () => {
         <DrawerContent>
           <DrawerCloseButton />
           <Text paddingLeft="20px" fontSize="3xl" fontWeight="bold">
-            Welcome!
-             {selector.userData?.username}
+            Welcome!{"  "}{selector.userData?.username}
           </Text>
-          <Text paddingLeft="20px" fontSize="xl">Log in using your Monster credentials</Text>
+          <Text paddingLeft="20px" fontSize="xl">
+            Log in using your Monster credentials
+          </Text>
           <DrawerBody>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div>
@@ -86,7 +88,9 @@ const Login = () => {
                   {...register("email", { required: true })}
                 />
                 {errors.email && (
-                  <span style={{ color: "red" }}>Please enter valid Email ID/Mobile number</span>
+                  <span style={{ color: "red" }}>
+                    Please enter valid Email ID/Mobile number
+                  </span>
                 )}
                 <br />
                 <br />
@@ -97,7 +101,9 @@ const Login = () => {
                   {...register("password", { required: true })}
                 />
                 {errors.password && (
-                  <span style={{ color: "red" }}>Please enter your password</span>
+                  <span style={{ color: "red" }}>
+                    Please enter your password
+                  </span>
                 )}
                 <br />
                 <br />
@@ -168,7 +174,7 @@ const Login = () => {
                 height: "140px",
               }}
             >
-              <b style={{fontSize:"20px"}} >New to Monster?</b>
+              <b style={{ fontSize: "20px" }}>New to Monster?</b>
               <p>
                 Create your profile now and be visible to the top recruiters in
                 the world
@@ -181,7 +187,7 @@ const Login = () => {
                 border: "1px solid black",
                 height: "100px",
                 textAlign: "center",
-                borderRadius:"5px"
+                borderRadius: "5px",
               }}
             >
               <p>Your dream job is a click away! Get the app on your mobile.</p>

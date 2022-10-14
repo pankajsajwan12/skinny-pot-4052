@@ -12,9 +12,10 @@
 }
 .WorkFromHomeFilters{
     background-color: white;
-    /* border: 1px solid green; */
+    border: 1px solid rgb(162, 162, 162);
     height: 95vh;
     width: 21%;
+
 }
 .WorkFromHomeFilterComponents input{
     border: 1px solid black;
@@ -40,6 +41,7 @@
     margin: auto;
     height: 4rem;
     width: 100%;
+    border: 1px solid rgb(158, 158, 158);
 }
 .selectTag{
     border: 1px solid #ccc;

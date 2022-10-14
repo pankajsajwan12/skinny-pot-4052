@@ -1,7 +1,12 @@
 .header{
     background-color: #e8e8e8;
-    text-align: right;
-    height: 50px;
+    /* text-align: right; */
+    height: 100px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 20px;
 }
 .login{
     width: 100%;
@@ -25,6 +30,14 @@
     color: white;
     padding-top: 20px;
     height: auto;
+}
+.body >div{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.body img{
+    height: 20px;
 }
 .employeerslogin{
     border: 1px solid black;
@@ -93,6 +106,10 @@
 .services{
     display:grid;
     grid-template-columns: repeat(3,1fr);
+    /* justify-content: s; */
+    /* border: 1px solid red; */
+    padding: 50px;
+    justify-content: space-around;
     
 }
 .bottom{
