@@ -9,7 +9,7 @@ const JobSearch = () => {
     <div>
       <Navbar />
       <AdvanceJobSearch />
-      {/* <JobSearchBottom /> */}
+      <JobSearchBottom />
       <Footer />
     </div>
   )

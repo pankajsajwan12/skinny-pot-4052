@@ -5,6 +5,7 @@ import ForEmployeers from '../Page/ForEmployeers/ForEmployeers'
 import HomePage from '../Page/HomePage'
 import JobSearch from '../Page/JobSearch'
 import PremiumServices from '../Page/PremiumServices'
+import Search from '../Page/SearchPage/Search'
 import WorkDetailsPage from '../Page/WorkDetailsPage'
 import WorkFromHomes from '../Page/WorkFromHomes'
 
@@ -18,6 +19,7 @@ const MainRoutes = () => {
         <Route path='/career-advice' element={<CareerTips />}/>
         <Route path='/career-services' element={<PremiumServices />}/>
         <Route path='/for-employeers' element={<ForEmployeers />}/>
+        <Route path='/search' element={<Search/>}/>
     </Routes>
   )
 }

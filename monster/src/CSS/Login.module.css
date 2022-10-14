@@ -8,6 +8,7 @@
     background: url("https://img.icons8.com/ios-glyphs/30/000000/lock--v1.png") no-repeat left;
     background-size: 20px;
 }
+form
 .login{
     width: 100%;
     background-color: #6c54da;
@@ -26,6 +27,7 @@
 .google:hover{
     background-color: #ff0000;
     color: white;
+    border: none;
 }
 .facebook{
     display: flex;
@@ -37,9 +39,10 @@
 .facebook:hover{
     background-color: #4267b2 ;
     color: white;
+    border: none;
 }
 
 .jobseekerbtn:hover{
     background-color: #f5a623;
-    color: white;
+    color-scheme: white;
 }

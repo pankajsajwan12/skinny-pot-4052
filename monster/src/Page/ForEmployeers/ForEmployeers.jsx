@@ -1,11 +1,13 @@
 import { Button, Text } from "@chakra-ui/react";
 import React from "react";
+import Navbar from "../../Components/Navbar/Navbar";
 import Header from "./Header";
 import styles from "./Header.module.css";
 
 const ForEmployeers = () => {
   return (
     <div>
+      <Navbar/>
       <Header />
       <br />
       {/* <div style={{display:"flex",height:"100%", border:"1px solid black"}} >
@@ -27,34 +29,34 @@ const ForEmployeers = () => {
           alt="It"
         />
         <div className={styles.body}>
-          <Text style={{ display: "flex", gap: "10px" }}>
+          <div style={{ display: "flex", gap: "10px" }}>
             {" "}
             <img src="icon-bg.png" alt="tickicon" />{" "}
             <span>AI in Recruting Technology</span>{" "}
-          </Text>
-          <Text style={{ display: "flex", gap: "10px" }}>
+          </div>
+          <div style={{ display: "flex", gap: "10px" }}>
             {" "}
             <img src="icon-bg.png" alt="tickicon" /> Conversional UI
-          </Text>
-          <Text style={{ display: "flex", gap: "10px" }}>
+          </div>
+          <div style={{ display: "flex", gap: "10px" }}>
             {" "}
             <img src="icon-bg.png" alt="tickicon" />
             Data Security
-          </Text>
-          <Text style={{ display: "flex", gap: "10px" }}>
+          </div>
+          <div style={{ display: "flex", gap: "10px" }}>
             {" "}
             <img src="icon-bg.png" alt="tickicon" />
             Power Recruiting
-          </Text>
+          </div>
           <br />
-          <Text style={{ paddingLeft: "50px" }}> Introducing</Text>
-          <Text style={{ paddingLeft: "50px" }}>
+          <div style={{ paddingLeft: "50px" }}> Introducing</div>
+          <div style={{ paddingLeft: "50px" }}>
             {" "}
             <b>Monster Better Together</b>{" "}
-          </Text>
-          <Text style={{ paddingLeft: "50px" }}>
+          </div>
+          <div style={{ paddingLeft: "50px" }}>
             <b>Experience</b>{" "}
-          </Text>
+          </div>
         </div>
         <div className={styles.employeerslogin}>
           <b>Login</b>
@@ -77,7 +79,7 @@ const ForEmployeers = () => {
           <br />
           <hr style={{ border: "0.1px solid grey" }} />
           <br />
-          <div style={{ display: "flex", margin: "auto" }}>
+          <div style={{ display: "flex", margin: "auto", gap:"20px",marginLeft:"50px" }}>
             <h5>New User?</h5>
             <a href="/">Sign up</a>
           </div>
@@ -149,9 +151,9 @@ const ForEmployeers = () => {
         </div>
         <br />
         <br />
-        <div className={styles.bottom} >
-          <Text fontSize="2xl" >Many more hiring solutions</Text>
-          <button className={styles.connectwithusbtn} >Connect with us</button>
+        <div className={styles.bottom}>
+          <Text fontSize="2xl">Many more hiring solutions</Text>
+          <button className={styles.connectwithusbtn}>Connect with us</button>
         </div>
       </div>
     </div>

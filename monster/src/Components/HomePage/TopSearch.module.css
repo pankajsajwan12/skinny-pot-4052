@@ -171,13 +171,13 @@
     color: rgb(150, 150, 150);
 }
 
-.uploadResume>button {
+.uploadResume button {
     background: #f5a623;
     color: rgb(255, 255, 255);
     padding: 10px;
 }
 
-.uploadResume>button:hover {
+.uploadResume button:hover {
     background: #dd6e13;
 
 }

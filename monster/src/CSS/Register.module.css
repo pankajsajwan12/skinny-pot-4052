@@ -40,8 +40,8 @@ input:focus{
     color: white;
     height: 50px;
     float: right;
-    border-radius: 5px;
     width: 120px;
+    margin-bottom: 50px;
 }
 .register{
     width: 80%;
@@ -53,3 +53,4 @@ input:focus{
 .register:hover{
     background-color: #3d2b8de5;
 }
+

@@ -1,15 +1,16 @@
-import * as types  from './actionType'
-import axios from 'axios'
+import * as types from "./actionType";
+import axios from "axios";
 
 export const getJobsData = (params) => (dispatch) => {
-    console.log("params",params);
-    dispatch({type : types.GET_JOBS_REQUEST})
-    return axios.get('https://monsterjobs.herokuapp.com/JobData',params)
+  //("params",params);
+  dispatch({ type: types.GET_JOBS_REQUEST });
+  return axios
+    .get("https://monsterjobs.herokuapp.com/JobData", params)
     .then((res) => {
-        console.log("res",res.data);
-        dispatch({type:types.GET_JOBS_SUCCESS, payload:res.data})
+      //("res",res.data);
+      dispatch({ type: types.GET_JOBS_SUCCESS, payload: res.data });
     })
     .catch(() => {
-        dispatch({type :types.GET_JOBS_FAILURE})
-    })
-}
+      dispatch({ type: types.GET_JOBS_FAILURE });
+    });
+};

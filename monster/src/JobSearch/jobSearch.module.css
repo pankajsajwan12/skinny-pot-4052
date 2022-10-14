@@ -7,6 +7,7 @@
 .AdvanceJobSearch_main,.JobSearchBottom_Main{
     width: 100%;
     background-color: rgb(245,245,245);
+    margin-top:80px;
 }
 .fontStyle{
     padding: 1.5rem 0rem;
@@ -33,11 +34,26 @@
     margin-top: 1.2rem;
     text-align: left;
 }
-input{
+.okInput{
+    /* all: unset; */
     border: none;
     outline:none;
-    font-size: 17px;
-    padding-left: 5px;
+    /* font-size: 17px; */
+    /* padding-left: 20px; */
+    /* padding: 10px; */
+    /* margin-left: 15px; */
+    /* border: 1px solid red; */
+    /* margin: auto; */
+}
+
+.formDiv>div{
+    display:flex;
+    /* align-items: center; */
+    /* padding-left: 20px; */
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
 }
 .ExpericenceAndLocation_Input{
     width: 90%;
@@ -120,12 +136,6 @@ input{
 }
 .Looking_font{
     text-align: left;
-}
-.searchTips_left{
-    /* rgb(71,168,236) */
-}
-.searchTips_Right{
-
 }
 
 /*-----------------------------Job Search Bottom --------------------------*/

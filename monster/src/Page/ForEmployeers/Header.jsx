@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css"
 import {Button} from "@chakra-ui/react"
+// import logo from "../../Images/"
 const Header = () => {
   return (
     <div>
@@ -12,7 +13,7 @@ const Header = () => {
       </div>
       <div style={{display:"flex",gap:"20px",marginTop:"10px",justifyContent:"space-around"}}>
         <div>
-          <img style={{height:"100%"}} src="mon_logo.png" alt="monlogo" />
+          <img style={{height:"100%"}} src="https://media.monsterindia.com/trex/public/default/images/monster-logo.svg" alt="monlogo" />
         </div>
         <div style={{display:"flex",gap:"20px"}}>
           <div style={{border:"1px solid black", height:"100%"}}>
