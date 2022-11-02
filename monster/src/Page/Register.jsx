@@ -88,7 +88,9 @@ const Register = () => {
                   <div className={styles.google}>
                     {" "}
                     <img
-                      src="https://img.icons8.com/parakeet/28/000000/experimental-google-logo-parakeet.png"
+                    width={"20px"} 
+                      // style={{padding:"10px"}}
+                      src="https://cdn-icons-png.flaticon.com/512/2111/2111450.png"
                       alt="google"
                     />
                     <Text fontSize="sm">Sign Up with Google</Text>{" "}
@@ -98,7 +100,8 @@ const Register = () => {
                   <div className={styles.facebook}>
                     {" "}
                     <img
-                      src="https://img.icons8.com/nolan/28/facebook-new.png"
+                    width={"20px"}
+                      src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
                       alt="facebook"
                     />
                     <Text fontSize="sm">Sign Up with facebook</Text>{" "}

@@ -15,7 +15,7 @@ const TopSearch = () => {
     <div className={style.topSearch}>
       <div className={style.leftContainer}>
         <div className={style.searchBox}>
-          <p className={style.header}>5000,000+ Jobs. Find Better.Faster</p>
+          <p className={style.header}>500,000+ Jobs. Find Better.Faster</p>
           <ul>
             <li>
               <Link to="/work-from-home-jobs">All Jobs</Link>

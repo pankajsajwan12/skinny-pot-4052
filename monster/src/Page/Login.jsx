@@ -147,8 +147,9 @@ const Login = () => {
                 {" "}
                 <div className={styles.google}>
                   {" "}
-                  <img
-                    src="https://img.icons8.com/parakeet/24/000000/experimental-google-logo-parakeet.png"
+                  {/* <a href="https://cdn-icons-png.flaticon.com/512/2111/2111450.png" title="google plus icons">Google plus icons created by Pixel perfect - Flaticon</a> */}
+                  <img width={"20px"}
+                    src="https://cdn-icons-png.flaticon.com/512/2111/2111450.png"
                     alt="google"
                   />
                   <Text fontSize="sm">Login with Google</Text>{" "}

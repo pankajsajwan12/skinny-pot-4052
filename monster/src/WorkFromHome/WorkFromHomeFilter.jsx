@@ -554,7 +554,7 @@ const WorkFromHomeFilter = () => {
                       onChange={handleFilterCompanyName}
                       checked={companyName.includes("Mesho")} 
                       />
-                    Mesho
+                    Meesho
                   </p>
                   <p>(129)</p>
                 </Box>
