@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./TopSearch.module.css";
 import { IoIosSearch } from "react-icons/io";
 import { IoMicOutline } from "react-icons/io5";
@@ -7,8 +7,9 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const TopSearch = () => {
+  const [query,setQuery]=useState("")
   // const selector = useSelector((state) => state.auth);
-
+  console.log(query)
   //(selector)
 
   return (
@@ -38,13 +39,13 @@ const TopSearch = () => {
               <input
                 type="text"
                 placeholder="Search by Skills, Company & Job Title"
-                id=""
+                onChange={(e)=>setQuery(e.target.value)}
               />
               <p>
                 <IoMicOutline />
               </p>
             </div>
-            <Link to="/search">
+            <Link to={`/search/${query}`}>
               <button>Search</button>
             </Link>
           </div>

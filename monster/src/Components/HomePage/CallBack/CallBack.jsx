@@ -11,7 +11,7 @@ function CallBack() {
             <p>Call 1-800-4196666 now! (Toll-free)</p>
         </div>
         <div>
-            <div><input type="text" placeholder="Enter your Number" id="" /></div>
+            <div><input type="text" placeholder="Enter your Number" id="" style={{border:"1px solid white"}} /></div>
             <div>Get a Call Back</div>
         </div>
     </div>

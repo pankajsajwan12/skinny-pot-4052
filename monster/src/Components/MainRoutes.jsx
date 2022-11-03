@@ -19,7 +19,7 @@ const MainRoutes = () => {
         <Route path='/career-advice' element={<CareerTips />}/>
         <Route path='/career-services' element={<PremiumServices />}/>
         <Route path='/for-employeers' element={<ForEmployeers />}/>
-        <Route path='/search' element={<Search/>}/>
+        <Route path='/search/:query' element={<Search/>}/>
     </Routes>
   )
 }
