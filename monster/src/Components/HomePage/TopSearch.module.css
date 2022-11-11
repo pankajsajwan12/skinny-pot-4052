@@ -175,13 +175,18 @@
     background: #f5a623;
     color: rgb(255, 255, 255);
     padding: 10px;
+    width: 100%;
 }
 
 .uploadResume button:hover {
     background: #dd6e13;
 
 }
-
+.uploadResume input{
+    all:unset;
+    width: 100px;
+    text-align: center;
+}
 .createJob {
     padding: 10px;
 }

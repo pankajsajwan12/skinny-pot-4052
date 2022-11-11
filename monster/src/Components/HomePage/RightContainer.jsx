@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./TopSearch.module.css"
+import style from "./TopSearch.module.css";
 
 function RightContainer() {
   return (
@@ -8,8 +8,11 @@ function RightContainer() {
         <p>NEW TO MONSTER?</p>
         <p>REGISTER WITH US</p>
         <p>Or</p>
+
         <button>
-          <span>UPLOAD RESUME</span> <br /> We will create you profile
+          <input type="file"  />
+          <br />
+          <span>UPLOAD RESUME</span>
         </button>
       </div>
       <div className={style.createJob}>
