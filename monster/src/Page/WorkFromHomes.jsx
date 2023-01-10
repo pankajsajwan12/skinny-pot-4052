@@ -3,7 +3,6 @@ import WorkFromHomeFilter from '../WorkFromHome/WorkFromHomeFilter'
 import WorkFromHome from '../WorkFromHome/WorkFromHome'
 import style from '../WorkFromHome/WorkFromHome.module.css'
 import Navbar from '../Components/Navbar/Navbar'
-import { Footer } from '../Components/Footer/Footer'
 
 const WorkFromHomes = () => {
   return (
@@ -13,7 +12,6 @@ const WorkFromHomes = () => {
         <div className={style.WorkFromHomeFilters}><WorkFromHomeFilter /></div>
         <div className={style.WorkFromHomes}><WorkFromHome /></div>
       </div>
-      <Footer />
     </>
   )
 }

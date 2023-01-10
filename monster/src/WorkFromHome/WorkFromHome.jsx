@@ -6,24 +6,23 @@ import style from "./WorkFromHome.module.css";
 import { FaRegStar } from "react-icons/fa";
 import { HiShare } from "react-icons/hi";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
-// import Navbar from "../Components/Navbar/Navbar";
+import { useState } from "react";
 
 const WorkFromHome = () => {
   const jobs = useSelector((store) => store.AppReducer.jobs);
-  // const isLoading = useSelector((store) => store.AppReducer.isLoading);
+  const [per_page, setPer_Page] = useState(10);
 
   const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
   const locations = useLocation();
 
-  //("Experience", searchParams.getAll("years"));
-  // //("location", location);
 
-  // let isLoading = true;
-  // if (!jobs.length) {
-  //   isLoading = false;
-  // }
-
+  const handleOnChangePage = (e) => {
+    setPer_Page(e.target.value);
+  }
+  const showPerPageData = jobs.slice(0, per_page);
+  console.log("shw",showPerPageData);
+  
   useEffect(() => {
     if (locations || jobs.length === 0) {
       let getJobsParams = {
@@ -33,24 +32,23 @@ const WorkFromHome = () => {
           Location: searchParams.getAll("location"),
         },
       };
-      //("getJobsParams :", getJobsParams);
       dispatch(getJobsData(getJobsParams));
     }
   }, [locations.search]);
-  //   //("jobs", jobs);
   return (
     <>
       <div className={style.WorkFromHome_Left_JobDetails_Pages}>
         <div className={style.WorkFromHome_TopDiv}>
           <div className={style.WorkFromHome_TopDiv_firstSelectTag}>
             <span>Show :&nbsp;</span>
-            <select className={style.selectTag}>
+            <select className={style.selectTag} onChange={handleOnChangePage}>
+              <option>select</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
               <option value="25">25</option>
               <option value="30">30</option>
-              <option value="35">35</option>
-              <option value="50">50</option>
-              <option value="100">100</option>
-              <option value="150">150</option>
             </select>
             <span>Per Page</span>
           </div>
@@ -68,7 +66,7 @@ const WorkFromHome = () => {
             }
           </div> */}
         <div>
-          {jobs.map((item) => {
+          {jobs.length == 0 ? <div>...Loading</div> : showPerPageData.map((item) => {
             return (
               <div key={item.id}>
                 <Link to={`/work-from-home-jobs/${item.id}`}>
@@ -89,7 +87,7 @@ const WorkFromHome = () => {
                 </Link>
                 <div className={style.jobPostingTime}>
                   <div className={style.jobPostingTime_leftSide}>
-                    <p>Posted : a hour age | </p>
+                    <p>Posted : a hour ago | </p>
                     <p className={style.fontColor}>
                       &nbsp;&nbsp;Work From Home
                     </p>

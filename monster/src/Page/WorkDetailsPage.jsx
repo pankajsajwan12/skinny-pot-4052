@@ -6,15 +6,13 @@ import { getJobsData } from "../Redux/AppReducer/action";
 import style from "../CSS/WorkDetails.module.css";
 import { FaRegStar, FaUserAlt } from "react-icons/fa";
 import { HiShare } from "react-icons/hi";
-import { Box, Button } from "@chakra-ui/react";
-import { Footer } from "../Components/Footer/Footer";
+import { Box, Button, Text } from "@chakra-ui/react";
 import Navbar from "../Components/Navbar/Navbar";
 
 const WorkDetailsPage = () => {
   const [curentJob, setCurrentJob] = useState([]);
   const jobsData = useSelector((store) => store.AppReducer.jobs);
   const dispatch = useDispatch();
-
   const { id } = useParams();
 
   useEffect(() => {
@@ -22,13 +20,9 @@ const WorkDetailsPage = () => {
       dispatch(getJobsData());
     }
   }, [dispatch, jobsData.length]);
-
-  //("jobsData", jobsData);
-
-  useEffect(() => {
+ useEffect(() => {
     if (id) {
       const currentJobs = jobsData.find((item) => item.id == id);
-      //("currentJobs", currentJobs);
       currentJobs && setCurrentJob(currentJobs);
     }
   }, [id, curentJob]);
@@ -39,16 +33,18 @@ const WorkDetailsPage = () => {
         <div className={style.WorkDetails_main_leftMain}>
           <Box
             className={style.WorkDetails_main_leftMain_TopSection}
-            display="flex"
+            display={{base:'block',md:"flex"}}
             width="90%"
             margin="auto"
             justifyContent="space-between"
             pt="2rem"
           >
-            <Box fontWeight="500" fontSize="1.9rem" pb="1.5rem">
+            <Box fontWeight="400"  fontSize={'1.5rem'}  pb={"1.8rem"}
+            className={style.about_the_job_text}
+            >
               About the Job in Details
             </Box>
-            <Box className={style.jobPostingTime_rightSide} pr="5">
+            <Box className={style.jobPostingTime_rightSide} pr={['0px','3px','5']}>
               <p className={style.reactIcons}>
                 <FaRegStar className={style.icons} />
               </p>
@@ -80,33 +76,32 @@ const WorkDetailsPage = () => {
           <div>
             <Box
               display="flex"
-              width="90%"
+              width={{base:"100%",md:"90%"}}
               margin="auto"
               backgroundColor="rgb(235,235,235)"
               p="0.5rem 1rem"
+              flexDirection={{base:'column',md:'row'}}
             >
-              <Box>Posted On : 2 days ago &nbsp; | &nbsp;</Box>
-              <Box> Total Views: 1954 &nbsp; | &nbsp;</Box>
-              <Box> Total Applications : 551 &nbsp; | &nbsp;</Box>
-              <Box> Job Id : {Math.floor(Math.random() * 100000)}</Box>
+              <Box textAlign={{md:'center',lg:'left'}}>Posted On : 2 days ago &nbsp; | &nbsp;</Box>
+              <Box textAlign={{md:'center',lg:'left'}}> Total Views: 1954 &nbsp; | &nbsp;</Box>
+              <Box textAlign={{md:'center',lg:'left'}}> Total Applications : 551 &nbsp; | &nbsp;</Box>
+              <Box textAlign={{md:'center',lg:'left'}}> Job Id : {Math.floor(Math.random() * 100000)}</Box>
               <Box marginLeft="8.7%"> Perment Job, Work From Home</Box>
             </Box>
           </div>
           <div className={style.WorkDetailsPage_jobDescription_Main}>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                paddingTop: "1rem",
-              }}
+            <Box
+              display={{base:"block", md:'flex'}}
+              justifyContent={'space-between'}
+              pt={'1rem'}
             >
-              <Box fontWeight="bold" fontSize="1.7rem">
+              <Box fontWeight="bold" fontSize={{base:"1rem",md :"1.7rem"}}>
                 Job Description
               </Box>
               <Box color="rgb(108,84,219)" fontWeight="bold" fontSize="1.1rem">
                 Send me similar jobs
               </Box>
-            </div>
+            </Box>
             <Box fontWeight="bold" pt="1rem" fontSize="1.1rem">
               Description :
             </Box>
@@ -192,30 +187,23 @@ const WorkDetailsPage = () => {
               </p>
             </div>
           </div>
-          {/* <div>
-          <img
-            src="https://media.monsterindia.com/trex/seo-search/public/default/images/cs-banner-budge-2.png"
-            alt="ad"
-          />
-        </div> */}
           <Box
-            display="flex"
+            display={{base:"block",md:"flex"}}
             justifyContent="space-between"
             width="90%"
             margin="auto"
             backgroundColor="rgb(108,84,218)"
-            h="4=5rem"
           >
-            <Box display="flex" p="1.3rem 0rem">
+            <Box display={'flex'} p="1.3rem 0rem">
               <Box pl="5">
                 <FaUserAlt className={style.FaUser_icons} />
               </Box>
-              <Box ml="3" color="white" fontWeight="500" fontSize="1.1rem">
+              <Box ml={{base:'12px',md:"3"}} mt={{base:'3px'}} color="white" fontWeight="500" fontSize={{base:"0.8rem",md:"1.1rem"}}>
                 {" "}
                 NOT REGISTERED ON MONSTER YET?
               </Box>
             </Box>
-            <Box p="1rem 2rem">
+            <Box p={{base:'0rem 0rem 0.9rem 0rem', md:"1rem 2rem"}}>
               <Button backgroundColor="white">REGISTER NOW</Button>
             </Box>
           </Box>
@@ -228,22 +216,22 @@ const WorkDetailsPage = () => {
               <Box
                 display="flex"
                 flexDirection="column"
-                fontSize="1.1rem"
+                fontSize={["0.8rem",'1.1rem']}
                 fontWeight="bold"
-                width="7rem"
+                width={["3.8rem",'7rem']}
               >
-                <span>Employment Types :</span>
-                <span style={{ paddingTop: "0.9rem" }}>Industry :</span>
-                <span style={{ paddingTop: "1.2rem" }}>Function :</span>
+                <Text >Employment Types :</Text>
+                <Text pt={{ base : "1rem", md: "1.2rem", lg:"1.2rem"}}>Industry :</Text>
+                <Text pt={{ base : "2.7rem", md: "2.7rem", lg:"1.2rem"}}>Function :</Text>
 
-                <span style={{ paddingTop: "1.2rem" }}>Roles:</span>
-                <span style={{ paddingTop: "1rem" }}> Skill:</span>
+                <Text pt={{ base : "1.7rem", md: "2.7rem", lg:"1.2rem"}}>Roles:</Text>
+                <Text pt={{ base : "2rem", md: "2.7rem", lg:"1.2rem"}}> Skill:</Text>
               </Box>
               <Box
                 display="flex"
                 flexDirection="column"
-                marginLeft="2.5rem"
-                fontSize="1.1rem"
+                marginLeft={['1.8rem',"2.5rem"]}
+                fontSize={['0.9rem',"1.1rem"]}
               >
                 <span style={{ height: "2rem", paddingTop: "0.3rem" }}>
                   Full time
@@ -258,7 +246,7 @@ const WorkDetailsPage = () => {
                   Customer Service Executive (Voice) , Customer Service
                   Executive (Non-voice)
                 </span>
-                <Box display="grid" pt="2" gridTemplateColumns="repeat(5,1fr)">
+                <Box display="grid" pt="2" gridTemplateColumns={{base :"repeat(2,1fr)",md :"repeat(2,1fr)",lg:"repeat(5,1fr)"}} className={style.skills_box}>
                   <span className={style.roundBox_skill}>Nonvoice</span>
                   <span className={style.roundBox_skill}>Backend</span>
                   <span className={style.roundBox_skill}>Voice</span>
@@ -393,7 +381,6 @@ const WorkDetailsPage = () => {
           </Box>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
