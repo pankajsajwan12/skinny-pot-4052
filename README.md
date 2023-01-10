@@ -29,32 +29,32 @@
 
 ## Home Page-1
 
-<img src="./monster/public/homepage-1.png" />
+<img src="./monster/public/homepage-1.jpg" />
 
 ## Home Page-2
 
-<img  src="./monster/public/homepage-2.png"/>
+<img  src="./monster/public/homepage-2.jpg"/>
 
 ## Footer
 
-<img src="./monster/public/footer.png"/>
+<img src="./monster/public/footer.jpg"/>
 
 ## Login Page
 
-<img src="./monster/public/login.png" />
+<img src="./monster/public/login.jpg" />
 
 ## Register
 
-<img src="./monster/public/register.png"/>
+<img src="./monster/public/register.jpg"/>
 
 ## Work-From-Home
 
-<img src="./monster/public/work-from-home-jobs.png"/>
+<img src="./monster/public/work-from-home-jobs.jpg"/>
 
 ## For Employeers-1
 
-<img src="./monster/public/foremployeers-1.png" />
+<img src="./monster/public/foremployeers-1.jpg" />
 
 ## For Employeers-2
 
-<img src="./monster/public/foremployeers-2.png" />
+<img src="./monster/public/foremployeers-2.jpg" />
