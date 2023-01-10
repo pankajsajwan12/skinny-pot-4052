@@ -79,10 +79,10 @@
     }
     .WorkDetails_main_RightMain{
         width: 30%;
-        border: 2px solid rgb(112, 10, 214);
+        /* border: 2px solid rgb(112, 10, 214); */
     } 
     .about_the_job_text{
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         font-size: 15px;
         margin-bottom: 1rem;
     }
