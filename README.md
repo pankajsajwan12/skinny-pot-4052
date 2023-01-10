@@ -8,6 +8,7 @@
 <h3>Monster-jobs is a source for jobs and career opportunities. Search for jobs, read career advice from Monster's job experts, and find hiring and recruiting ...</h3>
 
 <b>This is a team project by Masai school build in a week</b>
+
 <h2>We are the team of 4 Members</h2>
     <ul>
         <li>Pankaj Sajwan</li>
@@ -28,32 +29,32 @@
 
 ## Home Page-1
 
-<img src="./monster/public/homepage-1.png" >
+<img src="./monster/public/homepage-1.png" />
 
 ## Home Page-2
 
-<img  src="./monster/public/homepage-2.png">
+<img  src="./monster/public/homepage-2.png"/>
 
 ## Footer
 
-<img src="./monster/public/footer.png">
+<img src="./monster/public/footer.png"/>
 
 ## Login Page
 
-<img src="./monster/public/login.png" >
+<img src="./monster/public/login.png" />
 
 ## Register
 
-<img src="./monster/public/register.png">
+<img src="./monster/public/register.png"/>
 
 ## Work-From-Home
 
-<img src="./monster/public/work-from-home-jobs.png">
+<img src="./monster/public/work-from-home-jobs.png"/>
 
 ## For Employeers-1
 
-<img src="./monster/public/foremployeers-1.png" >
+<img src="./monster/public/foremployeers-1.png" />
 
 ## For Employeers-2
 
-<img src="./monster/public/foremployeers-2.png" >
+<img src="./monster/public/foremployeers-2.png" />
