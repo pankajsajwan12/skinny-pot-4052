@@ -6,7 +6,6 @@
 .WorkFromHomes_Main{
     width: 100%;
     padding-top: 8%;
-    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
 }
@@ -29,7 +28,6 @@
 .WorkFromHome_Left_JobDetails_Pages{
     width: 80.5%;
     margin-left: 3%;
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
 }
@@ -92,6 +90,9 @@
     padding-left: 1rem;
     display: flex;
 }
+.jobPostingTime_leftSide{
+     padding-top: 10px 
+}
 .fontColor{
     color: rgb(108,154,235) 
 }
@@ -115,4 +116,105 @@
 .boxIcons{
     display: flex;
     justify-content: space-between;
+}
+
+/* media Query of laptop and tablets */
+
+@media screen and (min-width : 320px) and (max-width : 768px) {
+    .WorkFromHomes_Main{
+        width: 100%;
+        padding: 10% 0% 5% 5%;
+        /* border: 1px solid red; */
+    }
+    .WorkFromHomeFilters{
+        width: 25%;   
+    }
+    .WorkFromHomes{
+        width: 75%;
+    }
+
+    .WorkFromHome_Left_JobDetails_Pages{
+        width: 92%;
+        margin-left: 4%;
+    }
+    .WorkFromHomeFilterComponents input{
+        height: 15px;
+        width: 15px;
+        
+    }
+    .boxIcons{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .boxIcons  input {
+        margin-top: 5px;
+    }
+    .boxIcons  p {
+        font-size: 12px;
+        padding-top: 4px;
+        margin: 0;
+    } 
+    .jobPostingTime_leftSide{
+        padding-left: 0.9rem;
+        padding-top: 12.5px;
+        font-size: 13px;
+    }
+}
+
+
+/* media Query of small devies */
+@media screen and (max-width : 320px) {
+    .WorkFromHomes_Main{
+        width: 100%;
+        padding: 26% 0% 0% 0%;
+        /* border: 1px solid red; */
+        display: block;
+    }
+    .WorkFromHomeFilters{
+        width: 100%;   
+    }
+    .WorkFromHomes{
+        width: 100%;
+    }
+
+    .WorkFromHome_Left_JobDetails_Pages{
+        width: 100%;
+        margin-left: 0%;
+    }
+    .icons{
+        width: 20px;
+        height: 20px;
+    }
+    .applyBtn{
+        padding: 0 0.5rem;
+        width: 3.5rem;
+        font-size: 12px;
+        height: 2rem;
+    }
+    .reactIcons{
+        margin: 0.4rem 0.1rem;
+    }
+    .jobPostingTime_leftSide,.jobPostingTime_rightSide{
+        padding-left: 0rem;
+        display: flex;
+    }
+    .jobPostingTime_leftSide{
+        padding-left: 0.1rem;
+        padding-top: 10px;
+        font-size: 10px;
+    }
+    .jobDeatails{
+        text-align: left;
+    }
+    .WorkFromHome_TopDiv{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .selectTag{
+        width: 70px;
+    }
+    .WorkFromHome_TopDiv_firstSelectTag{
+        font-size: 13px;
+        margin-left: 3px;
+    }
 }

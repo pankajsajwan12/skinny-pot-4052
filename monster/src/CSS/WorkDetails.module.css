@@ -2,8 +2,8 @@
     padding-left: 1rem;
     display: flex;
 }
-
 .WorkDetails_main{
+    margin-top: 5%;
     width: 100%;
     display: flex;
 }
@@ -29,9 +29,7 @@
     text-align: left;
     padding : 1rem 1rem;
 }
-/* .WorkDetailsPage_jobDescription_Main{
 
-} */
 .companyName{
     color: rgb(108,154,235)
 }
@@ -61,10 +59,95 @@
     width: 8.3rem;
     font-size: 1.2rem;
     height: 3rem;
-    margin: 0.4rem;
+    margin: 0.4rem; 
     padding-top: 0.5rem;
     font-weight: 500;
     text-align: center;
     border-radius: 1.3rem;
     background-color: rgb(234,234,234);
+}
+
+/* media query of mid devices */
+@media screen and (min-width : 420px) and (max-width : 768px){
+    .WorkDetails_main{
+        margin-top: 10%;
+        width: 100%;
+        /* border: 2px solid black; */
+    } 
+    .WorkDetails_main_leftMain{
+        /* border: 2px solid red; */
+    }
+    .WorkDetails_main_RightMain{
+        width: 30%;
+        /* border: 2px solid rgb(112, 10, 214); */
+    } 
+    .about_the_job_text{
+        /* border: 1px solid blue; */
+        font-size: 15px;
+        margin-bottom: 1rem;
+    }
+    .roundBox_skill{
+        width: 8.3rem;
+        font-size: 1.2rem;
+        height: 3rem;
+        margin: 0.4rem; 
+        padding-top: 0.5rem;
+        font-weight: 500;
+        text-align: center;
+        border-radius: 1.3rem;
+        background-color: rgb(234,234,234);
+    }
+}
+
+@media screen and (max-width : 420px) {
+    .WorkDetails_main{
+        margin-top: 15%;
+        width: 100%;
+        display: block;
+        /* border: 2px solid black; */
+    } 
+    .WorkDetails_main_leftMain{
+        /* border: 2px solid red; */
+        width: 100%;
+    }
+    .jobPostingTime_rightSide{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 1rem;
+        justify-content: center;
+        padding-left: 0px;
+    }
+    .WorkDetails_main_RightMain{
+        width: 100%;
+        /* border: 2px solid rgb(112, 10, 214); */
+    } 
+    .about_the_job_text{
+        font-size: 1.7rem;
+        font-weight: bold;
+        margin-bottom: 0rem;
+        padding: 0px;
+    }
+    .roundBox_skill{
+        width: 100%;
+        font-size: 0.9rem;
+        height: 2.5rem;
+        text-align: center;
+        border-radius: 1.3rem;
+        margin-left: 10px;
+        background-color: rgb(234,234,234);
+    }
+    .JobDetails_card{
+            width: 100%;
+            margin: auto;
+            text-align: none;
+            margin-top: 2rem;
+            background-color: white;
+            padding : 1.5rem 1.5rem
+        } 
+    .WorkDetails_main_RightMain{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+    } 
 }
